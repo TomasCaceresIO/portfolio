@@ -4,10 +4,10 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout
   title="Sobre Mí | Tomás Cáceres"
-  description="El lado humano y personal de Tomás Cáceres fuera de la terminal: fútbol competitivo en Unionistas B y ex-Real Valladolid, gimnasio, música y lecturas imprescindibles."
+  description="El lado humano y personal de Tomás Cáceres fuera de la pantalla: fútbol competitivo en Unionistas B, gimnasio, música y lecturas imprescindibles."
 >
-  <!-- Retro desktop environment background -->
-  <div class="min-h-screen bg-[#3a6ea5] text-zinc-900 font-mono py-6 px-3 sm:px-6 selection:bg-[#000080] selection:text-white">
+  <!-- Background retro grid / workspace -->
+  <div class="min-h-screen bg-[#008080] text-zinc-900 font-mono py-6 px-3 sm:px-6 selection:bg-[#000080] selection:text-white">
     
     <!-- Top System Nav / Bar -->
     <header class="max-w-4xl mx-auto mb-6 bg-[#c0c0c0] p-1 border-2 border-t-white border-l-white border-r-[#404040] border-b-[#404040] shadow-md">
@@ -28,60 +28,65 @@ import Layout from '../layouts/Layout.astro';
         <a href="/universidad" class="hover:bg-[#000080] hover:text-white px-1.5 py-0.5 transition-colors"><u>U</u>niversidad</a>
         <a href="/sobre-mi" class="bg-[#000080] text-white px-1.5 py-0.5"><u>S</u>obre Mí</a>
         <span class="text-zinc-500">|</span>
-        <span class="text-zinc-600">Modo: Fuera de la Terminal</span>
+        <span class="text-zinc-600">Modo: Fuera de la Pantalla</span>
       </div>
     </header>
 
     <!-- Main Content Container -->
     <main class="max-w-4xl mx-auto space-y-6">
 
-      <!-- Header Bio Window -->
+      <!-- 1. Sección Información Personal -->
       <section class="bg-[#c0c0c0] p-1.5 border-2 border-t-white border-l-white border-r-[#404040] border-b-[#404040] shadow-xl">
         <div class="bg-gradient-to-r from-[#000080] to-[#1084d0] text-white px-3 py-1 flex items-center justify-between text-xs font-bold">
           <div class="flex items-center gap-2">
             <span>👤</span>
             <span>INFORMACIÓN_PERSONAL // VIDA FUERA DE LA PANTALLA</span>
           </div>
-          <span class="text-[11px] font-normal opacity-90">[100%_HUMANO]</span>
+          <div class="flex items-center gap-2">
+            <span class="text-[11px] font-normal opacity-90 hidden sm:inline">[100%_HUMANO]</span>
+            <div class="flex items-center gap-1">
+              <span class="w-3.5 h-3.5 bg-[#c0c0c0] text-black text-[9px] flex items-center justify-center border border-t-white border-l-white border-r-black border-b-black font-bold leading-none">_</span>
+              <span class="w-3.5 h-3.5 bg-[#c0c0c0] text-black text-[9px] flex items-center justify-center border border-t-white border-l-white border-r-black border-b-black font-bold leading-none">□</span>
+              <span class="w-3.5 h-3.5 bg-[#c0c0c0] text-black text-[9px] flex items-center justify-center border border-t-white border-l-white border-r-black border-b-black font-bold leading-none">✕</span>
+            </div>
+          </div>
         </div>
 
         <div class="p-4 sm:p-6 bg-[#fbf8f1] border-2 border-t-[#808080] border-l-[#808080] border-r-white border-b-white mt-1 space-y-5 text-sm sm:text-base leading-relaxed text-zinc-900 font-serif">
           
           <div class="flex flex-col md:flex-row gap-6 items-center md:items-start">
             
-            <!-- Retro Picture Frame Placeholder ("Foto_Tomas.bmp") -->
-            <div class="shrink-0">
-              <div class="w-48 sm:w-52 bg-[#c0c0c0] p-2 border-2 border-t-white border-l-white border-r-[#404040] border-b-[#404040] shadow-md text-center">
-                <div class="w-full h-48 sm:h-52 bg-[#e8e4d9] border-2 border-t-[#808080] border-l-[#808080] border-r-white border-b-white flex flex-col items-center justify-center p-3 text-zinc-700 font-mono text-xs relative overflow-hidden group">
-                  
-                  <!-- Retro Photo Placeholder Art -->
-                  <div class="text-3xl mb-2 select-none">📷</div>
-                  <span class="font-bold text-black text-xs">Foto_Tomas.bmp</span>
-                  <span class="text-[10px] text-zinc-500 mt-1 font-mono">[ 320x320 24-bit ]</span>
-                  
-                  <div class="mt-2 text-[10px] text-zinc-600 bg-[#dfdfdf] px-2 py-0.5 border border-[#808080]">
-                    Placeholder Visual
+            <!-- Retro Picture Frame: amigos.jpg -->
+            <div class="shrink-0 w-full sm:w-56 md:w-60">
+              <div class="bg-[#dfdfdf] p-2 border-2 border-t-white border-l-white border-r-[#404040] border-b-[#404040] shadow-md text-center">
+                <div class="bg-[#ffffff] p-1.5 border-2 border-t-[#808080] border-l-[#808080] border-r-white border-b-white">
+                  <div class="relative min-h-[12rem] sm:min-h-[14rem] bg-[#e8e4d9] border border-[#808080] flex items-center justify-center overflow-hidden">
+                    <img
+                      src="/images/amigos.jpg"
+                      alt="Amigos"
+                      class="w-full h-48 sm:h-56 object-cover block"
+                      loading="lazy"
+                      onerror="this.onerror=null; this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');"
+                    />
+                    <div class="hidden absolute inset-0 flex flex-col items-center justify-center p-3 text-center text-zinc-600 font-mono text-xs">
+                      <span class="text-3xl mb-1">👥</span>
+                      <span class="font-bold text-black text-xs">amigos.bmp</span>
+                      <span class="text-[10px] text-zinc-500 mt-0.5">[ 640x480 ]</span>
+                    </div>
                   </div>
-
-                  <!-- Retro scanlines overlay subtle -->
-                  <div class="absolute inset-0 pointer-events-none opacity-10 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%)] bg-[length:100%_4px]"></div>
                 </div>
-                <p class="font-mono text-[11px] text-zinc-700 mt-1.5 font-semibold">Tomás Cáceres</p>
-                <p class="font-mono text-[10px] text-zinc-500">2026 Edition</p>
+                <p class="font-mono text-xs text-zinc-800 font-bold mt-1.5">[amigos.bmp]</p>
               </div>
             </div>
 
             <!-- Intro text -->
-            <div class="space-y-3 font-serif flex-1">
-              <div class="font-mono border-b border-[#808080] pb-2">
+            <div class="space-y-4 font-serif flex-1 text-zinc-900">
+              <div>
                 <h1 class="text-xl sm:text-2xl font-bold font-serif text-black">Más allá del código y los modelos</h1>
-                <p class="text-xs text-zinc-600 mt-0.5">Atleta amateur, devoto del entrenamiento diario, melómano y lector compulsivo.</p>
+                <hr class="retro-hr my-3" />
               </div>
-              <p class="first-letter:text-3xl first-letter:font-bold first-letter:float-left first-letter:mr-2 first-letter:text-[#000080]">
-                Aunque paso gran parte de mi tiempo diseñando pipelines, afinando arquitecturas de datos y probando agentes, mi vida no se reduce a una ventana de terminal.
-              </p>
-              <p>
-                El deporte de alto rendimiento, la disciplina del gimnasio, la música constante de fondo y los libros que cambian tu manera de pensar son los cuatro pilares que me mantienen centrado, con energía alta y con la mente clara.
+              <p class="first-letter:text-4xl first-letter:font-bold first-letter:float-left first-letter:mr-2 first-letter:text-[#000080] leading-relaxed">
+                A pesar de que estudio una carrera tengo una vida fuera de ella, en la que mis mayores hobbies son el fútbol, los amigos, la música y el gimnasio. Sobre todo el fútbol y el gimnasio hacen que me olvide de todo día a día y siempre lo he compaginado con los estudios. Lo llevo haciendo toda mi vida. Esto me ha ayudado a autoexigirme, a imponerme disciplina, a lidiar con problemas, a gestionar un grupo también y a relacionarme con mis compañeros. Por lo que yo creo que son buenas soft skills que puedo aplicar dentro de un grupo de trabajo.
               </p>
             </div>
 
@@ -90,175 +95,244 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </section>
 
-      <!-- Section: Fútbol & Deporte Competitivo -->
+      <!-- 2. Sección Trayectoria Deportiva -->
       <section class="bg-[#c0c0c0] p-1.5 border-2 border-t-white border-l-white border-r-[#404040] border-b-[#404040] shadow-xl">
         <div class="bg-gradient-to-r from-[#000080] to-[#1084d0] text-white px-3 py-1 flex items-center justify-between text-xs font-bold">
           <div class="flex items-center gap-2">
             <span>⚽</span>
             <span>TRAYECTORIA_DEPORTIVA.EXE // FÚTBOL COMPETITIVO</span>
           </div>
-          <span class="text-[11px] font-normal">UNIONISTAS / EX-REAL VALLADOLID</span>
+          <span class="text-[11px] font-normal opacity-90 hidden sm:inline">[UNIONISTAS_B]</span>
         </div>
 
-        <div class="p-4 sm:p-6 bg-[#fbf8f1] border-2 border-t-[#808080] border-l-[#808080] border-r-white border-b-white mt-1 space-y-4">
+        <div class="p-4 sm:p-6 bg-[#fbf8f1] border-2 border-t-[#808080] border-l-[#808080] border-r-white border-b-white mt-1 space-y-5 text-sm sm:text-base leading-relaxed text-zinc-900 font-serif">
           
-          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 border-b border-[#808080]/50 pb-2">
-            <div>
-              <h2 class="font-mono text-base font-bold text-black flex items-center gap-2">
-                <span>🏆</span>
-                <span>Fútbol y Competición</span>
-              </h2>
-              <p class="font-serif text-xs text-zinc-600">Trabajo en equipo, resiliencia y exigencia bajo presión.</p>
-            </div>
-            <div class="font-mono text-xs bg-[#e8e4d9] px-2.5 py-1 border border-[#808080] text-zinc-800">
-              Posición: Campo / Competición Nacional
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <!-- Club 1: Unionistas -->
-            <div class="bg-[#fffcf5] p-3.5 border-2 border-t-white border-l-white border-r-[#808080] border-b-[#808080] space-y-2">
-              <div class="flex items-center justify-between border-b border-[#808080]/30 pb-1 font-mono text-xs">
-                <span class="font-bold text-black flex items-center gap-1.5">
-                  <span class="text-sm">⚪⚫</span>
-                  <span>Unionistas de Salamanca B</span>
-                </span>
-                <span class="bg-emerald-100 text-emerald-900 px-1.5 py-0.5 border border-emerald-300 font-semibold text-[10px]">ACTUAL</span>
+          <div class="flex flex-col md:flex-row gap-6 items-center md:items-start">
+            
+            <!-- Retro Picture Frame: futbol.jpg -->
+            <div class="shrink-0 w-full sm:w-56 md:w-60">
+              <div class="bg-[#dfdfdf] p-2 border-2 border-t-white border-l-white border-r-[#404040] border-b-[#404040] shadow-md text-center">
+                <div class="bg-[#ffffff] p-1.5 border-2 border-t-[#808080] border-l-[#808080] border-r-white border-b-white">
+                  <div class="relative min-h-[12rem] sm:min-h-[14rem] bg-[#e8e4d9] border border-[#808080] flex items-center justify-center overflow-hidden">
+                    <img
+                      src="/images/futbol.jpg"
+                      alt="Fútbol Tomás Cáceres"
+                      class="w-full h-48 sm:h-56 object-cover block"
+                      loading="lazy"
+                      onerror="this.onerror=null; this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');"
+                    />
+                    <div class="hidden absolute inset-0 flex flex-col items-center justify-center p-3 text-center text-zinc-600 font-mono text-xs">
+                      <span class="text-3xl mb-1">⚽</span>
+                      <span class="font-bold text-black text-xs">futbol.bmp</span>
+                      <span class="text-[10px] text-zinc-500 mt-0.5">[ 640x480 ]</span>
+                    </div>
+                  </div>
+                </div>
+                <p class="font-mono text-xs text-zinc-800 font-bold mt-1.5">[futbol.bmp]</p>
               </div>
-              <p class="font-serif text-xs sm:text-sm text-zinc-800 leading-relaxed">
-                Jugador en activo del filial de Unionistas de Salamanca. Competir cada fin de semana te enseña a tomar decisiones en milisegundos, gestionar el cansancio y confiar plenamente en los compañeros a tu alrededor.
-              </p>
             </div>
 
-            <!-- Club 2: Real Valladolid -->
-            <div class="bg-[#fffcf5] p-3.5 border-2 border-t-white border-l-white border-r-[#808080] border-b-[#808080] space-y-2">
-              <div class="flex items-center justify-between border-b border-[#808080]/30 pb-1 font-mono text-xs">
-                <span class="font-bold text-black flex items-center gap-1.5">
-                  <span class="text-sm">🟣⚪</span>
-                  <span>Cantera Real Valladolid C.F.</span>
-                </span>
-                <span class="bg-purple-100 text-purple-900 px-1.5 py-0.5 border border-purple-300 font-semibold text-[10px]">FORMACIÓN</span>
+            <!-- Content -->
+            <div class="space-y-4 font-serif flex-1 text-zinc-900">
+              <div>
+                <h2 class="text-xl sm:text-2xl font-bold font-serif text-black">Fútbol y Competición</h2>
+                <hr class="retro-hr my-3" />
               </div>
-              <p class="font-serif text-xs sm:text-sm text-zinc-800 leading-relaxed">
-                Años formativos en la cantera blanquivioleta. Una escuela de disciplina diaria, mentalidad profesional, hábitos saludables y cultura de esfuerzo que hoy aplico directamente tanto a la ingeniería como a cualquier reto.
-              </p>
-            </div>
-          </div>
 
-          <p class="font-serif text-sm text-zinc-800 bg-[#e8e4d9] p-3 border border-[#808080] leading-relaxed">
-            <em>"El fútbol no es un hobby pasivo: es la mejor metáfora de la ingeniería de software: comunicación limpia, roles claros y saber responder cuando el plan inicial se desmorona en el minuto 80."</em>
-          </p>
+              <p class="leading-relaxed">
+                Actualmente soy un jugador de Unionistas de Salamanca B, el capitán, y compagino mi carrera. Sin embargo anteriormente estaba en la cantera del Valladolid. Esto me ha hecho conocer mucha gente y muchos amigos con los que estoy agradecido de haber coincidido.
+              </p>
+
+              <!-- Retro Badges -->
+              <div class="bg-[#fffcf5] p-3 border border-[#808080] font-mono text-xs text-zinc-800 flex flex-wrap gap-4">
+                <div class="flex items-center gap-1.5">
+                  <span class="text-zinc-500 font-bold">Posición:</span>
+                  <span class="bg-[#e8e4d9] px-2 py-0.5 border border-[#808080] text-black font-bold">Mediocentro</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <span class="text-zinc-500 font-bold">Competición:</span>
+                  <span class="bg-[#e8e4d9] px-2 py-0.5 border border-[#808080] text-black font-bold">Tercera RFEF</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
 
         </div>
       </section>
 
-      <!-- Section: Gimnasio & Desconexión -->
+      <!-- 3. Sección Santuario Físico (Gimnasio) -->
       <section class="bg-[#c0c0c0] p-1.5 border-2 border-t-white border-l-white border-r-[#404040] border-b-[#404040] shadow-xl">
         <div class="bg-gradient-to-r from-[#000080] to-[#1084d0] text-white px-3 py-1 flex items-center justify-between text-xs font-bold">
           <div class="flex items-center gap-2">
             <span>🏋️‍♂️</span>
             <span>SANTUARIO_FISICO.TXT // GIMNASIO & PAZ MENTAL</span>
           </div>
-          <span class="text-[11px] font-normal">OFFLINE_MODE</span>
+          <span class="text-[11px] font-normal opacity-90 hidden sm:inline">[OFFLINE_MODE]</span>
         </div>
 
-        <div class="p-4 sm:p-6 bg-[#fbf8f1] border-2 border-t-[#808080] border-l-[#808080] border-r-white border-b-white mt-1 space-y-4 font-serif text-zinc-900">
-          <h2 class="font-mono text-base font-bold text-black flex items-center gap-2 border-b border-[#808080]/50 pb-2">
-            <span>🔋</span>
-            <span>El gimnasio como espacio sagrado de desconexión</span>
-          </h2>
+        <div class="p-4 sm:p-6 bg-[#fbf8f1] border-2 border-t-[#808080] border-l-[#808080] border-r-white border-b-white mt-1 space-y-5 text-sm sm:text-base leading-relaxed text-zinc-900 font-serif">
+          
+          <div class="flex flex-col md:flex-row gap-6 items-center md:items-start">
+            
+            <!-- Retro Picture Frame: gym.jpg -->
+            <div class="shrink-0 w-full sm:w-56 md:w-60">
+              <div class="bg-[#dfdfdf] p-2 border-2 border-t-white border-l-white border-r-[#404040] border-b-[#404040] shadow-md text-center">
+                <div class="bg-[#ffffff] p-1.5 border-2 border-t-[#808080] border-l-[#808080] border-r-white border-b-white">
+                  <div class="relative min-h-[12rem] sm:min-h-[14rem] bg-[#e8e4d9] border border-[#808080] flex items-center justify-center overflow-hidden">
+                    <img
+                      src="/images/gym.jpg"
+                      alt="Gimnasio Tomás Cáceres"
+                      class="w-full h-48 sm:h-56 object-cover block"
+                      loading="lazy"
+                      onerror="this.onerror=null; this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');"
+                    />
+                    <div class="hidden absolute inset-0 flex flex-col items-center justify-center p-3 text-center text-zinc-600 font-mono text-xs">
+                      <span class="text-3xl mb-1">🏋️</span>
+                      <span class="font-bold text-black text-xs">gym.bmp</span>
+                      <span class="text-[10px] text-zinc-500 mt-0.5">[ 640x480 ]</span>
+                    </div>
+                  </div>
+                </div>
+                <p class="font-mono text-xs text-zinc-800 font-bold mt-1.5">[gym.bmp]</p>
+              </div>
+            </div>
 
-          <p class="leading-relaxed text-sm sm:text-base">
-            El entrenamiento de fuerza es mi momento sagrado del día. Es el espacio exacto donde se apagan las pantallas, los logs de terminal y las notificaciones.
-          </p>
+            <!-- Content -->
+            <div class="space-y-4 font-serif flex-1 text-zinc-900">
+              <div>
+                <h2 class="text-xl sm:text-2xl font-bold font-serif text-black">El gimnasio como espacio de desconexión</h2>
+                <hr class="retro-hr my-3" />
+              </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 font-mono text-xs">
-            <div class="bg-[#fffcf5] p-3 border border-[#808080]">
-              <span class="text-base block mb-1">🧘</span>
-              <strong class="text-black block mb-0.5">Paz Interior:</strong>
-              <span class="text-zinc-600 font-serif text-xs">Reset mental total tras horas de computación y diseño analítico.</span>
+              <p class="leading-relaxed">
+                El gimnasio es la parte de mi vida en la cual probablemente disfrute más y, a la vez, donde más sufra, ya que me intento exigir al máximo. A la vez es un momento en el cual no utilizo el teléfono y estoy conmigo mismo: escucho podcast, me entero de ideas de negocio en podcasts como Spicy Fortuna o La fórmula del éxito de Uri Shavat o tengo un plan. Esto me ayuda a olvidarme del día y de todo lo que haya pasado y a disfrutar al máximo el entreno.
+              </p>
             </div>
-            <div class="bg-[#fffcf5] p-3 border border-[#808080]">
-              <span class="text-base block mb-1">📈</span>
-              <strong class="text-black block mb-0.5">Constancia:</strong>
-              <span class="text-zinc-600 font-serif text-xs">Progreso gradual basado en repetición, paciencia y técnica sólida.</span>
-            </div>
-            <div class="bg-[#fffcf5] p-3 border border-[#808080]">
-              <span class="text-base block mb-1">🧠</span>
-              <strong class="text-black block mb-0.5">Resistencia Mental:</strong>
-              <span class="text-zinc-600 font-serif text-xs">Acostumbrarse a la incomodidad para mantener la calma ante problemas complejos.</span>
-            </div>
+
           </div>
+
         </div>
       </section>
 
-      <!-- Section: Música -->
+      <!-- 4. Sección Media Player -->
       <section class="bg-[#c0c0c0] p-1.5 border-2 border-t-white border-l-white border-r-[#404040] border-b-[#404040] shadow-xl">
         <div class="bg-gradient-to-r from-[#000080] to-[#1084d0] text-white px-3 py-1 flex items-center justify-between text-xs font-bold">
           <div class="flex items-center gap-2">
             <span>🎧</span>
-            <span>MEDIA_PLAYER.WAV // MÚSICA & FLOW STATE</span>
+            <span>MEDIA_PLAYER.WAV // MÚSICA & FLOW</span>
           </div>
-          <span class="text-[11px] font-normal">STEREO_ON</span>
+          <span class="text-[11px] font-normal opacity-90 hidden sm:inline">[STEREO_ON]</span>
         </div>
 
-        <div class="p-4 sm:p-6 bg-[#fbf8f1] border-2 border-t-[#808080] border-l-[#808080] border-r-white border-b-white mt-1 space-y-4">
-          <div class="flex items-center justify-between border-b border-[#808080]/50 pb-2">
-            <h2 class="font-mono text-base font-bold text-black flex items-center gap-2">
-              <span>🎵</span>
-              <span>Compañera inseparable de programación y estudio</span>
-            </h2>
-            <div class="font-mono text-xs text-zinc-600 hidden sm:block">
-              [ PLAYING: Deep_Focus_Session.mp3 ]
+        <div class="p-4 sm:p-6 bg-[#fbf8f1] border-2 border-t-[#808080] border-l-[#808080] border-r-white border-b-white mt-1 space-y-5 text-sm sm:text-base leading-relaxed text-zinc-900 font-serif">
+          
+          <div class="flex flex-col md:flex-row gap-6 items-center md:items-start">
+            
+            <!-- Retro Picture Frame: musica.jpg -->
+            <div class="shrink-0 w-full sm:w-56 md:w-60">
+              <div class="bg-[#dfdfdf] p-2 border-2 border-t-white border-l-white border-r-[#404040] border-b-[#404040] shadow-md text-center">
+                <div class="bg-[#ffffff] p-1.5 border-2 border-t-[#808080] border-l-[#808080] border-r-white border-b-white">
+                  <div class="relative min-h-[12rem] sm:min-h-[14rem] bg-[#e8e4d9] border border-[#808080] flex items-center justify-center overflow-hidden">
+                    <img
+                      src="/images/musica.jpg"
+                      alt="Música Tomás Cáceres"
+                      class="w-full h-48 sm:h-56 object-cover block"
+                      loading="lazy"
+                      onerror="this.onerror=null; this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');"
+                    />
+                    <div class="hidden absolute inset-0 flex flex-col items-center justify-center p-3 text-center text-zinc-600 font-mono text-xs">
+                      <span class="text-3xl mb-1">🎵</span>
+                      <span class="font-bold text-black text-xs">musica.bmp</span>
+                      <span class="text-[10px] text-zinc-500 mt-0.5">[ 640x480 ]</span>
+                    </div>
+                  </div>
+                </div>
+                <p class="font-mono text-xs text-zinc-800 font-bold mt-1.5">[musica.bmp]</p>
+              </div>
             </div>
+
+            <!-- Content -->
+            <div class="space-y-4 font-serif flex-1 text-zinc-900">
+              <div>
+                <h2 class="text-xl sm:text-2xl font-bold font-serif text-black">Mi mayor hobby dentro de mis hobbies</h2>
+                <hr class="retro-hr my-3" />
+              </div>
+
+              <p class="leading-relaxed">
+                La música es algo que está en mi vida día a día y prácticamente en todo momento estudio, entreno y se podría decir que vivo con música de fondo y escuchándola activamente. Es uno de los mayores gustos que me puedo dar: estar en el coche y escuchar música, yendo a donde sea.
+              </p>
+            </div>
+
           </div>
 
-          <p class="font-serif text-sm sm:text-base leading-relaxed text-zinc-900">
-            No concibo una sesión de código profunda, un análisis de datos o un bloque de estudio sin música. Es el catalizador que activa el <em>deep work</em> y bloquea cualquier distracción exterior.
-          </p>
-
-          <!-- Retro Cassette / Music Player UI Mock -->
-          <div class="bg-[#242424] text-emerald-400 p-3 border-2 border-t-[#404040] border-l-[#404040] border-r-white border-b-white font-mono text-xs space-y-2 shadow-inner">
-            <div class="flex justify-between items-center text-[11px] text-zinc-400 border-b border-zinc-700 pb-1">
-              <span>▶ TRACK 01 / 99</span>
-              <span>128 KBPS // 44.1 KHZ</span>
-              <span class="text-emerald-400 font-bold">VOL: [■■■■■■■■□□]</span>
-            </div>
-            <div class="flex flex-col sm:flex-row justify-between gap-1 text-sm text-white">
-              <span>Soundtrack: Instrumental, Lo-Fi, Synthwave & Ambient Focus</span>
-              <span class="text-emerald-400 font-mono text-xs">STATUS: LOOP ACTIVADO</span>
-            </div>
-          </div>
         </div>
       </section>
 
-      <!-- Section: Lectura (Mis 3 Imprescindibles) -->
+      <!-- 5. Sección Biblioteca Personal -->
       <section class="bg-[#c0c0c0] p-1.5 border-2 border-t-white border-l-white border-r-[#404040] border-b-[#404040] shadow-xl">
         <div class="bg-gradient-to-r from-[#000080] to-[#1084d0] text-white px-3 py-1 flex items-center justify-between text-xs font-bold">
           <div class="flex items-center gap-2">
             <span>📚</span>
             <span>BIBLIOTECA_PERSONAL.MDB // MIS 3 LECTURAS IMPRESCINDIBLES</span>
           </div>
-          <span class="text-[11px] font-normal">MUST_READS</span>
+          <span class="text-[11px] font-normal opacity-90 hidden sm:inline">[MUST_READS]</span>
         </div>
 
         <div class="p-4 sm:p-6 bg-[#fbf8f1] border-2 border-t-[#808080] border-l-[#808080] border-r-white border-b-white mt-1 space-y-6">
-          <p class="font-serif text-sm sm:text-base text-zinc-900 leading-relaxed">
-            Leo para ganar perspectiva histórica, entender la mentalidad de quienes construyeron industrias desde cero y proteger la capacidad de concentración en un mundo saturado de estímulos superficiales:
-          </p>
-
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          
+          <div class="flex flex-col md:flex-row gap-6 items-center md:items-start">
             
-            <!-- Book 1: Shoe Dog -->
+            <!-- Retro Picture Frame: libros.jpg -->
+            <div class="shrink-0 w-full sm:w-56 md:w-60">
+              <div class="bg-[#dfdfdf] p-2 border-2 border-t-white border-l-white border-r-[#404040] border-b-[#404040] shadow-md text-center">
+                <div class="bg-[#ffffff] p-1.5 border-2 border-t-[#808080] border-l-[#808080] border-r-white border-b-white">
+                  <div class="relative min-h-[12rem] sm:min-h-[14rem] bg-[#e8e4d9] border border-[#808080] flex items-center justify-center overflow-hidden">
+                    <img
+                      src="/images/libros.jpg"
+                      alt="Libros de Tomás Cáceres"
+                      class="w-full h-48 sm:h-56 object-cover block"
+                      loading="lazy"
+                      onerror="this.onerror=null; this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');"
+                    />
+                    <div class="hidden absolute inset-0 flex flex-col items-center justify-center p-3 text-center text-zinc-600 font-mono text-xs">
+                      <span class="text-3xl mb-1">📖</span>
+                      <span class="font-bold text-black text-xs">libros.bmp</span>
+                      <span class="text-[10px] text-zinc-500 mt-0.5">[ 640x480 ]</span>
+                    </div>
+                  </div>
+                </div>
+                <p class="font-mono text-xs text-zinc-800 font-bold mt-1.5">[libros.bmp]</p>
+              </div>
+            </div>
+
+            <!-- Intro text -->
+            <div class="space-y-4 font-serif flex-1 text-zinc-900">
+              <div>
+                <h2 class="text-xl sm:text-2xl font-bold font-serif text-black">Lecturas que me inspiran</h2>
+                <hr class="retro-hr my-3" />
+              </div>
+
+              <p class="font-serif text-sm sm:text-base text-zinc-900 leading-relaxed">
+                A pesar de ser de la generación Z me he acostumbrado a leer y a disfrutar leyendo. Aquí te adjunto tres de los libros que más me han gustado y me han inspirado y puedo decir que de los tres me los he leído ya un par de veces mínimo.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- The 3 Books Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+            
+            <!-- Book 1: Nunca te pares -->
             <article class="bg-[#fffcf5] p-4 border-2 border-t-white border-l-white border-r-[#808080] border-b-[#808080] flex flex-col justify-between space-y-3">
               <div class="space-y-2">
                 <div class="font-mono text-xs bg-amber-100 text-amber-900 px-2 py-0.5 border border-amber-300 font-bold w-fit">
                   #01 / RESILIENCIA
                 </div>
-                <h3 class="font-serif font-bold text-base text-black">"Nunca te pares" (Shoe Dog)</h3>
+                <h3 class="font-serif font-bold text-base text-black">"Nunca te pares"</h3>
                 <p class="font-mono text-xs text-zinc-600">Phil Knight</p>
                 <p class="font-serif text-xs sm:text-sm text-zinc-800 leading-relaxed pt-1">
-                  La historia sin edulcorar de la creación de Nike. Un recordatorio brutal de que todo proyecto ambicioso atraviesa años de incertidumbre, deudas y caos antes de funcionar.
+                  Nunca te pares, que es la autobiografía del CEO fundador de Nike. Me ha ayudado a saber cómo son los entresijos de la creación de una empresa y los momentos difíciles que ha pasado tanto el fundador como la empresa para poder sobrevivir. Por eso Nike es de mis marcas favoritas debido a lo que me inspiran y lo que cuentan, no solo la marca de ropa.
                 </p>
               </div>
               <div class="font-mono text-[11px] text-zinc-600 pt-2 border-t border-[#808080]/30">
@@ -275,7 +349,7 @@ import Layout from '../layouts/Layout.astro';
                 <h3 class="font-serif font-bold text-base text-black">"Steve Jobs"</h3>
                 <p class="font-mono text-xs text-zinc-600">Walter Isaacson</p>
                 <p class="font-serif text-xs sm:text-sm text-zinc-800 leading-relaxed pt-1">
-                  La obsesión por el producto, la intersección entre tecnología y humanidades, y la búsqueda incansable de la excelencia y el diseño limpio sin concesiones a la mediocridad.
+                  Steve Jobs para mí es un referente en cuanto a la visión del producto: intentar que sea lo más simple posible, obsesionado con todos los detalles, y eso es lo que le diferenció seguramente de los otros competidores. También hay que decir que él no era el mejor en gestión de grupos.
                 </p>
               </div>
               <div class="font-mono text-[11px] text-zinc-600 pt-2 border-t border-[#808080]/30">
@@ -283,7 +357,7 @@ import Layout from '../layouts/Layout.astro';
               </div>
             </article>
 
-            <!-- Book 3: Deep Work -->
+            <!-- Book 3: Céntrate (Deep Work) -->
             <article class="bg-[#fffcf5] p-4 border-2 border-t-white border-l-white border-r-[#808080] border-b-[#808080] flex flex-col justify-between space-y-3">
               <div class="space-y-2">
                 <div class="font-mono text-xs bg-emerald-100 text-emerald-900 px-2 py-0.5 border border-emerald-300 font-bold w-fit">
@@ -292,7 +366,7 @@ import Layout from '../layouts/Layout.astro';
                 <h3 class="font-serif font-bold text-base text-black">"Céntrate" (Deep Work)</h3>
                 <p class="font-mono text-xs text-zinc-600">Cal Newport</p>
                 <p class="font-serif text-xs sm:text-sm text-zinc-800 leading-relaxed pt-1">
-                  El manual definitivo para prosperar en la economía del conocimiento: cultivar la habilidad de concentrarse sin distracciones en tareas cognitivamente exigentes.
+                  Este ha sido un libro que me ha ayudado a ver cuánto tiempo gasto en cosas inútiles como las redes sociales. Aunque es necesario para mantenerte en contacto con amigos o conocidos, ayuda mucho seguir los consejos de este libro, el cual recomiendo.
                 </p>
               </div>
               <div class="font-mono text-[11px] text-zinc-600 pt-2 border-t border-[#808080]/30">
@@ -302,10 +376,11 @@ import Layout from '../layouts/Layout.astro';
 
           </div>
 
-          <div class="pt-2 flex flex-wrap items-center justify-between gap-4 font-mono text-xs border-t border-[#808080]/30">
+          <!-- Internal navigation shortcuts -->
+          <div class="pt-3 flex flex-wrap items-center justify-between gap-4 font-mono text-xs border-t border-[#808080]/30">
             <a href="/" class="inline-flex items-center gap-1 px-3 py-1.5 bg-[#c0c0c0] text-black border-2 border-t-white border-l-white border-r-[#404040] border-b-[#404040] hover:bg-[#d8d8d8] active:border-t-[#404040] active:border-l-[#404040] active:border-r-white active:border-b-white font-semibold">
               <span>←</span>
-              <span>Volver a Portafolio</span>
+              <span>Volver a Inicio</span>
             </a>
             <a href="/universidad" class="inline-flex items-center gap-1 px-3 py-1.5 bg-[#c0c0c0] text-black border-2 border-t-white border-l-white border-r-[#404040] border-b-[#404040] hover:bg-[#d8d8d8] active:border-t-[#404040] active:border-l-[#404040] active:border-r-white active:border-b-white font-semibold">
               <span>Ver Formación & Universidad</span>
