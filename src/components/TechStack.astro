@@ -1,0 +1,74 @@
+---
+const categories = [
+  {
+    title: 'Machine Learning & Data Science',
+    description: 'Modelado estadístico, series temporales y evaluación de inferencia.',
+    skills: [
+      { name: 'Python', role: 'Data Analysis, Feature Pipelines & Modeling' },
+      { name: 'PyTorch / Scikit-Learn', role: 'Deep Learning & Statistical Algorithms' },
+      { name: 'Time-Series & Embeddings', role: 'Clustering, Anomaly Detection & Vector Search' },
+    ],
+  },
+  {
+    title: 'Core Systems & Edge Performance',
+    description: 'Sistemas compilados de bajo consumo y cero latencia.',
+    skills: [
+      { name: 'Rust', role: 'Safe concurrency, zero-cost abstractions & CLI tools' },
+      { name: 'Tauri', role: 'Local-first desktop backends with minimal RAM (<35MB)' },
+      { name: 'Local IPC / Sockets', role: 'High-throughput inter-process communication' },
+    ],
+  },
+  {
+    title: 'Frontend & UI Engineering',
+    description: 'Interfaces reactivas, dashboarding de telemetría y web rápida.',
+    skills: [
+      { name: 'React', role: 'Component-driven interactive dashboards' },
+      { name: 'Astro', role: 'Ultra-fast static architectures & zero-JS overhead' },
+      { name: 'Tailwind CSS', role: 'Modern, high-density minimal engineering UI' },
+    ],
+  },
+  {
+    title: 'DevOps, CI/CD & Agentic Automation',
+    description: 'Automatización de compilación multi-plataforma y orquestación multi-agente.',
+    skills: [
+      { name: 'Git & GitOps', role: 'Atomic commits, trunk-based delivery & branching' },
+      { name: 'GitHub Actions CI/CD', role: 'Automated multi-target compilation (.exe, .zip)' },
+      { name: 'Antigravity Multi-Agent', role: 'Autonomous multi-role software orchestration' },
+    ],
+  },
+];
+---
+
+<section id="stack" class="py-16 md:py-24 border-b border-zinc-900">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+      <div>
+        <span class="text-xs font-mono uppercase tracking-widest text-zinc-400">Capacidades Técnicas</span>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white mt-2">
+          Stack Tecnológico de Ingeniería
+        </h2>
+      </div>
+      <p class="text-sm font-mono text-zinc-400 mt-2 md:mt-0">
+        Especialización: Rust + Python + AI Pipelines
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {categories.map((category) => (
+        <div class="p-6 rounded-xl bg-zinc-900/40 border border-zinc-800/80 hover:border-zinc-700 transition-colors">
+          <h3 class="text-lg font-bold text-white mb-1">{category.title}</h3>
+          <p class="text-xs text-zinc-400 font-mono mb-6">{category.description}</p>
+
+          <ul class="space-y-3">
+            {category.skills.map((skill) => (
+              <li class="flex items-start justify-between gap-4 py-2 border-b border-zinc-800/40 last:border-none">
+                <span class="text-sm font-medium text-zinc-200 font-mono">{skill.name}</span>
+                <span class="text-xs text-zinc-400 text-right">{skill.role}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
