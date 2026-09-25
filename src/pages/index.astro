@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import BentoGrid from '../components/BentoGrid.astro';
+import TechStack from '../components/TechStack.astro';
+import Contact from '../components/Contact.astro';
+---
+
+<Layout
+  title="Tomás Cáceres | ML & Data Science Engineer — AI Orchestration"
+  description="Portfolio de Tomás Cáceres: Machine Learning & Data Science Engineer, orquestador de agentes autónomos y pipelines de datos locales de alto rendimiento."
+>
+  <!-- Minimal Nav -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-zinc-950/80 backdrop-blur-md border-b border-zinc-900">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+      <a href="#" class="font-mono text-sm font-semibold text-white tracking-tight hover:text-zinc-300 transition-colors">
+        tc<span class="text-zinc-500">.engineer</span>
+      </a>
+
+      <div class="flex items-center gap-6 text-xs font-mono text-zinc-400">
+        <a href="#case-study" class="hover:text-white transition-colors">
+          /caso-estudio
+        </a>
+        <a href="#stack" class="hover:text-white transition-colors">
+          /stack
+        </a>
+        <a href="#contact" class="hover:text-white transition-colors">
+          /contacto
+        </a>
+        <a
+          href="https://github.com/TomasCaceresIO"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="px-2.5 py-1 rounded bg-zinc-900 border border-zinc-800 text-zinc-200 hover:border-zinc-700 hover:text-white transition-all hidden sm:inline-flex items-center gap-1"
+        >
+          <span>github</span>
+          <span class="text-zinc-500">↗</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <Hero />
+    <BentoGrid />
+    <TechStack />
+    <Contact />
+  </main>
+</Layout>
