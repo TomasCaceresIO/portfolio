@@ -3,304 +3,242 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout
-  title="Tomás Cáceres — Inicio & Proyectos"
-  description="Portfolio de Tomás Cáceres: Estudiante de Ingeniería Informática, Machine Learning, Data Science y desarrollo con agentes de IA."
+  title="Tomás Cáceres | Inicio & Proyectos"
+  description="Portfolio de Tomás Cáceres: Estudiante de Ingeniería Informática, Machine Learning, Data Science y proyectos de software local-first."
 >
-  <!-- Top Retro Window Menu Bar -->
-  <header class="border-b border-zinc-800 bg-zinc-900/90 sticky top-0 z-40 backdrop-blur-sm">
-    <div class="max-w-4xl mx-auto px-4 py-2.5 flex flex-wrap items-center justify-between gap-3 font-mono text-xs">
-      <div class="flex items-center gap-2">
-        <span class="inline-block w-3 h-3 bg-emerald-500 rounded-full animate-pulse"></span>
-        <a href="/" class="font-bold text-zinc-100 hover:text-amber-400 transition-colors">
-          tomas@caceres:~$
-        </a>
-      </div>
-      <nav class="flex items-center gap-2 sm:gap-3">
-        <a
-          href="/"
-          class="px-2.5 py-1 text-zinc-100 bg-zinc-800 border-t border-l border-zinc-600 border-b border-r border-zinc-950 shadow-sm font-semibold hover:bg-zinc-700 transition-colors"
-        >
-          [ Inicio ]
-        </a>
-        <a
-          href="/universidad"
-          class="px-2.5 py-1 text-zinc-400 hover:text-zinc-100 bg-zinc-900/80 border border-zinc-800 hover:border-zinc-700 transition-colors"
-        >
-          /universidad
-        </a>
-        <a
-          href="/sobre-mi"
-          class="px-2.5 py-1 text-zinc-400 hover:text-zinc-100 bg-zinc-900/80 border border-zinc-800 hover:border-zinc-700 transition-colors"
-        >
-          /sobre-mi
-        </a>
-        <a
-          href="https://github.com/TomasCaceresIO"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="px-2.5 py-1 text-zinc-400 hover:text-zinc-100 bg-zinc-900/80 border border-zinc-800 hover:border-zinc-700 transition-colors hidden sm:inline-flex items-center gap-1"
-        >
-          GitHub ↗
-        </a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="max-w-4xl mx-auto px-4 py-8 sm:py-12 space-y-12">
-    <!-- Hero Section -->
-    <section class="retro-window p-6 sm:p-8 bg-zinc-900/90 border-2 border-zinc-700 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)]">
-      <div class="window-titlebar mb-6 px-3 py-1.5 bg-gradient-to-r from-zinc-800 to-zinc-700 border border-zinc-600 flex items-center justify-between text-xs font-mono text-zinc-200">
-        <span class="flex items-center gap-2">
-          <span class="text-amber-400">💾</span> user_profile.nfo
-        </span>
-        <div class="flex items-center gap-1.5 opacity-80">
-          <span class="w-3 h-3 inline-block bg-zinc-600 border border-zinc-400 text-[9px] leading-none text-center font-bold">_</span>
-          <span class="w-3 h-3 inline-block bg-zinc-600 border border-zinc-400 text-[9px] leading-none text-center font-bold">□</span>
-          <span class="w-3 h-3 inline-block bg-red-800/80 border border-red-500 text-[9px] leading-none text-center font-bold">×</span>
+  <!-- Background retro grid / workspace -->
+  <div class="min-h-screen bg-[#008080] text-zinc-900 font-mono py-6 px-3 sm:px-6 selection:bg-[#000080] selection:text-white">
+    
+    <!-- Top System Nav / Bar -->
+    <header class="max-w-4xl mx-auto mb-6 bg-[#c0c0c0] p-1 border-2 border-t-white border-l-white border-r-[#404040] border-b-[#404040] shadow-md">
+      <div class="bg-gradient-to-r from-[#000080] to-[#1084d0] text-white px-3 py-1 flex items-center justify-between text-xs font-bold tracking-wide">
+        <div class="flex items-center gap-2">
+          <span>📁</span>
+          <span>C:\SISTEMA\PERFIL_TOMAS.EXE</span>
+        </div>
+        <div class="flex items-center gap-1">
+          <button class="w-4 h-4 bg-[#c0c0c0] text-black text-[10px] flex items-center justify-center border border-t-white border-l-white border-r-black border-b-black font-bold leading-none cursor-default">_</button>
+          <button class="w-4 h-4 bg-[#c0c0c0] text-black text-[10px] flex items-center justify-center border border-t-white border-l-white border-r-black border-b-black font-bold leading-none cursor-default">□</button>
+          <a href="/" class="w-4 h-4 bg-[#c0c0c0] text-black text-[10px] flex items-center justify-center border border-t-white border-l-white border-r-black border-b-black font-bold leading-none hover:bg-red-200">✕</a>
         </div>
       </div>
-
-      <div class="space-y-4">
-        <h1 class="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-zinc-50">
-          Hola, soy Tomás
-        </h1>
-
-        <p class="text-base sm:text-lg text-zinc-300 leading-relaxed font-sans">
-          Estudiante de <strong class="text-zinc-100 font-semibold">Ingeniería Informática</strong> enfocado en <span class="text-amber-400 font-mono text-sm sm:text-base">Machine Learning</span> y <span class="text-amber-400 font-mono text-sm sm:text-base">Data Science</span>, apasionado por trastear con datos, orquestar agentes y construir utilidades reales sin complicarse la vida.
-        </p>
-
-        <div class="pt-2 flex flex-wrap gap-2 text-xs font-mono">
-          <span class="px-2.5 py-1 bg-zinc-950 border border-zinc-800 text-zinc-400">
-            📍 Madrid, España
-          </span>
-          <span class="px-2.5 py-1 bg-zinc-950 border border-zinc-800 text-zinc-400">
-            🤖 Agent Orchestration
-          </span>
-          <span class="px-2.5 py-1 bg-zinc-950 border border-zinc-800 text-zinc-400">
-            🔒 Local-First
-          </span>
-          <span class="px-2.5 py-1 bg-zinc-950 border border-zinc-800 text-zinc-400">
-            📊 Data Science & ML
-          </span>
-        </div>
+      <!-- Menu bar -->
+      <div class="flex flex-wrap gap-4 px-2 py-1 text-xs border-b border-[#808080] text-zinc-800 bg-[#c0c0c0]">
+        <a href="/" class="bg-[#000080] text-white px-1.5 py-0.5"><u>I</u>nicio</a>
+        <a href="/universidad" class="hover:bg-[#000080] hover:text-white px-1.5 py-0.5 transition-colors"><u>U</u>niversidad</a>
+        <a href="/sobre-mi" class="hover:bg-[#000080] hover:text-white px-1.5 py-0.5 transition-colors"><u>S</u>obre Mí</a>
+        <span class="text-zinc-500">|</span>
+        <span class="text-zinc-600">Sistema: Windows 95 / Web 1.0 Netscape</span>
       </div>
-    </section>
+    </header>
 
-    <!-- Featured Project: ActivityUI -->
-    <section class="retro-window p-6 sm:p-8 bg-zinc-900/90 border-2 border-zinc-700 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)]">
-      <div class="window-titlebar mb-6 px-3 py-1.5 bg-gradient-to-r from-blue-950 to-zinc-800 border border-blue-800/60 flex items-center justify-between text-xs font-mono text-blue-200">
-        <span class="flex items-center gap-2">
-          <span>⚡</span> featured_project: activityUI.exe
-        </span>
-        <span class="text-[11px] text-blue-300 font-mono">v1.0.0 [STABLE]</span>
-      </div>
-
-      <div class="space-y-6">
-        <div>
-          <div class="flex flex-wrap items-baseline gap-3">
-            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-zinc-50">
-              ActivityUI
-            </h2>
-            <span class="font-mono text-xs text-amber-400 bg-amber-950/50 border border-amber-800 px-2 py-0.5">
-              Local-First Time Intelligence
-            </span>
+    <!-- Main Window Container -->
+    <main class="max-w-4xl mx-auto space-y-6">
+      
+      <!-- 1. Ventana de Presentación (Ficha Personal) -->
+      <section class="bg-[#c0c0c0] p-1.5 border-2 border-t-white border-l-white border-r-[#404040] border-b-[#404040] shadow-xl">
+        <div class="bg-gradient-to-r from-[#000080] to-[#1084d0] text-white px-3 py-1 flex items-center justify-between text-xs font-bold">
+          <div class="flex items-center gap-2">
+            <span>💾</span>
+            <span>C:\SISTEMA\PERFIL_TOMAS.EXE</span>
           </div>
-          <p class="mt-3 text-base text-zinc-300 leading-relaxed">
-            Una aplicación de escritorio pensada para saber en qué se va exactamente el tiempo frente al ordenador 
-            sin enviar nada a servidores externos ni comprometer la privacidad. Todo se procesa y almacena en local, 
-            construida íntegramente orquestando agentes de IA en paralelo para diseñar, prototipar y refinar cada módulo.
-          </p>
+          <span class="text-[11px] font-normal opacity-90">[ESTADO: ACTIVO]</span>
         </div>
 
-        <!-- Technical Highlights -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 font-mono text-xs">
-          <div class="p-3 bg-zinc-950/70 border border-zinc-800">
-            <div class="text-zinc-400 font-bold mb-1">🔒 100% Privado</div>
-            <div class="text-zinc-400">Sin telemetría, sin cuentas, base de datos local SQLite.</div>
+        <div class="p-4 sm:p-6 bg-[#fbf8f1] border-2 border-t-[#808080] border-l-[#808080] border-r-white border-b-white mt-1 space-y-5 text-sm sm:text-base leading-relaxed text-zinc-900 font-serif">
+          
+          <div class="flex flex-col sm:flex-row sm:items-baseline justify-between border-b-2 border-[#808080] pb-3 gap-2 font-mono">
+            <div>
+              <h1 class="text-2xl sm:text-4xl font-bold font-serif text-black tracking-tight">
+                Hola, soy Tomás
+              </h1>
+              <p class="text-xs text-zinc-600 mt-0.5">Ingeniería Informática &bull; Machine Learning &bull; Data Science</p>
+            </div>
+            <div class="inline-flex items-center gap-2 text-xs bg-[#e8e4d9] px-3 py-1 border border-[#808080] self-start sm:self-auto">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-600 animate-pulse"></span>
+              <span class="font-semibold text-zinc-800">● Modo: Creador & Estudiante</span>
+            </div>
           </div>
-          <div class="p-3 bg-zinc-950/70 border border-zinc-800">
-            <div class="text-zinc-400 font-bold mb-1">🤖 Agentic Built</div>
-            <div class="text-zinc-400">Desarrollo acelerado orquestando múltiples agentes autónomos.</div>
-          </div>
-          <div class="p-3 bg-zinc-950/70 border border-zinc-800">
-            <div class="text-zinc-400 font-bold mb-1">⚡ Ligero & Rápido</div>
-            <div class="text-zinc-400">Monitorización pasiva eficiente en segundo plano.</div>
-          </div>
-        </div>
 
-        <!-- Retro 3D Beveled Buttons (Win95 / Netscape style) -->
-        <div class="pt-2">
-          <div class="text-xs font-mono text-zinc-400 mb-3 uppercase tracking-wider">
-            [ Acceso directo al proyecto ]
-          </div>
-          <div class="flex flex-wrap items-center gap-4">
-            <a
-              href="https://14tomass.github.io/activityUI/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="retro-btn text-zinc-900 bg-zinc-200 font-mono text-xs sm:text-sm font-bold px-4 py-2 flex items-center gap-2"
-            >
-              <span>🌐</span>
-              <span>Visitar Landing</span>
-              <span class="text-zinc-600">↗</span>
-            </a>
-
-            <a
-              href="https://github.com/14tomass/activityUI"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="retro-btn text-zinc-900 bg-zinc-200 font-mono text-xs sm:text-sm font-bold px-4 py-2 flex items-center gap-2"
-            >
-              <span>📂</span>
-              <span>Ver Repositorio</span>
-              <span class="text-zinc-600">↗</span>
-            </a>
-
-            <a
-              href="https://github.com/14tomass/activityUI/releases/latest"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="retro-btn text-zinc-900 bg-zinc-200 font-mono text-xs sm:text-sm font-bold px-4 py-2 flex items-center gap-2"
-            >
-              <span>💾</span>
-              <span>Descargar Releases</span>
-              <span class="text-zinc-600">↗</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Under Construction / En Obras Vintage Block -->
-    <section class="retro-window p-6 bg-zinc-900/90 border-2 border-zinc-700 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)]">
-      <!-- Vintage Caution Tape Header -->
-      <div class="hazard-stripe py-2 px-4 mb-6 border border-amber-500/50 shadow-inner flex items-center justify-between font-mono font-bold text-xs sm:text-sm text-zinc-950 uppercase tracking-widest select-none">
-        <span>🚧 WORK IN PROGRESS</span>
-        <span class="hidden sm:inline">⚠️ EN OBRAS ⚠️</span>
-        <span>🚧 LAB ZONE</span>
-      </div>
-
-      <div class="space-y-4">
-        <div class="flex items-center gap-3">
-          <div class="text-2xl sm:text-3xl">🧪</div>
-          <div>
-            <h3 class="font-serif text-xl sm:text-2xl font-bold text-zinc-100">
-              Laboratorio de Machine Learning & Data Science
-            </h3>
-            <p class="font-mono text-xs text-amber-400">
-              [ status: entrenando modelos & organizando datasets ]
+          <!-- Editorial Presentation -->
+          <div class="space-y-3 font-serif text-zinc-900">
+            <p class="first-letter:text-4xl first-letter:font-bold first-letter:float-left first-letter:mr-2 first-letter:text-[#000080] leading-relaxed">
+              Soy estudiante de <strong>Ingeniería Informática</strong> enfocado en <strong>Machine Learning</strong> y <strong>Data Science</strong>. Me apasiona trastear con datos, entender cómo funcionan los modelos bajo el capó y construir utilidades reales sin complicarme la vida ni depender de jerga innecesaria.
             </p>
           </div>
-        </div>
 
-        <p class="text-sm sm:text-base text-zinc-300 leading-relaxed">
-          Este espacio está reservado para futuros modelos predictivos, pipelines de visualización de datos, 
-          notebooks reproducibles y experimentos con arquitecturas de agentes autónomos.
-        </p>
-
-        <div class="border border-dashed border-zinc-700 bg-zinc-950/60 p-4 font-mono text-xs text-zinc-400 space-y-2">
-          <div class="flex items-center gap-2 text-zinc-300">
-            <span class="text-amber-500">&gt;</span> Proyectos en cola de procesamiento:
+          <!-- Ficha técnica resumen (idéntica a la de Enfoque/Filosofía de universidad) -->
+          <div class="bg-[#fffcf5] p-3 border border-[#808080] font-mono text-xs text-zinc-800 grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div class="border-b sm:border-b-0 sm:border-r border-[#808080]/50 pb-2 sm:pb-0 sm:pr-2">
+              <span class="text-zinc-500 block font-semibold">ENFOQUE PRINCIPAL:</span>
+              <span class="font-bold text-black">Machine Learning & Agentes</span>
+            </div>
+            <div class="border-b sm:border-b-0 sm:border-r border-[#808080]/50 pb-2 sm:pb-0 sm:pr-2">
+              <span class="text-zinc-500 block font-semibold">FILOSOFÍA:</span>
+              <span class="font-bold text-black">Código útil y local-first</span>
+            </div>
+            <div>
+              <span class="text-zinc-500 block font-semibold">ESTADO:</span>
+              <span class="font-bold text-black">3.er año (Grado en Informática)</span>
+            </div>
           </div>
-          <ul class="list-disc list-inside space-y-1 text-zinc-400 ml-2">
-            <li>Modelos de predicción y análisis estadístico aplicados a datos reales.</li>
-            <li>Pipelines de orquestación multi-agente con ejecución y memoria local.</li>
-            <li>Recursos, apuntes y casos prácticos de Ingeniería Informática.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
 
-    <!-- Internal Navigation Suggestions -->
-    <section class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-      <a
-        href="/universidad"
-        class="retro-window p-5 bg-zinc-900/80 border-2 border-zinc-700 hover:border-zinc-500 transition-colors shadow-[3px_3px_0px_0px_rgba(0,0,0,0.8)] group block"
-      >
-        <div class="flex items-center justify-between mb-2">
-          <span class="font-mono text-xs text-amber-400">[ Directorio ]</span>
-          <span class="font-mono text-xs text-zinc-400 group-hover:text-zinc-100 transition-colors">ir ➔</span>
         </div>
-        <h4 class="font-serif text-lg font-bold text-zinc-100 group-hover:text-amber-300 transition-colors">
-          🎓 /universidad
-        </h4>
-        <p class="mt-1 text-xs text-zinc-400 leading-normal">
-          Apuntes, proyectos académicos, asignaturas y código desarrollado durante el grado de Ingeniería Informática.
-        </p>
-      </a>
+      </section>
 
-      <a
-        href="/sobre-mi"
-        class="retro-window p-5 bg-zinc-900/80 border-2 border-zinc-700 hover:border-zinc-500 transition-colors shadow-[3px_3px_0px_0px_rgba(0,0,0,0.8)] group block"
-      >
-        <div class="flex items-center justify-between mb-2">
-          <span class="font-mono text-xs text-amber-400">[ Perfil ]</span>
-          <span class="font-mono text-xs text-zinc-400 group-hover:text-zinc-100 transition-colors">ir ➔</span>
+      <!-- 2. Ventana de Proyecto Destacado (ActivityUI) -->
+      <section class="bg-[#c0c0c0] p-1.5 border-2 border-t-white border-l-white border-r-[#404040] border-b-[#404040] shadow-xl">
+        <div class="bg-gradient-to-r from-[#000080] to-[#1084d0] text-white px-3 py-1 flex items-center justify-between text-xs font-bold">
+          <div class="flex items-center gap-2">
+            <span>⚡</span>
+            <span>PROYECTO_DESTACADO // ACTIVITYUI.EXE</span>
+          </div>
+          <span class="text-[11px] font-mono bg-blue-900 text-yellow-300 px-2 py-0.5 border border-blue-400 font-bold">[v1.0.0_STABLE]</span>
         </div>
-        <h4 class="font-serif text-lg font-bold text-zinc-100 group-hover:text-amber-300 transition-colors">
-          👤 /sobre-mi
-        </h4>
-        <p class="mt-1 text-xs text-zinc-400 leading-normal">
-          Filosofía de trabajo, trayectoria, enfoque hacia el software local-first y formas de contacto directo.
-        </p>
-      </a>
-    </section>
-  </main>
 
-  <!-- Footer -->
-  <footer class="border-t border-zinc-800 bg-zinc-950 py-8 mt-12 text-center text-xs font-mono text-zinc-400">
-    <div class="max-w-4xl mx-auto px-4 space-y-2">
-      <p>Tomás Cáceres © {new Date().getFullYear()} — Diseñado con inspiración vintage &amp; minimalismo.</p>
-      <p class="text-zinc-400">Compilado con Astro &amp; Tailwind CSS. Sin rastreadores ni cookies.</p>
-    </div>
-  </footer>
+        <div class="p-4 sm:p-6 bg-[#fbf8f1] border-2 border-t-[#808080] border-l-[#808080] border-r-white border-b-white mt-1 space-y-5">
+          
+          <div class="border-b border-[#808080]/50 pb-3">
+            <div class="flex flex-wrap items-baseline gap-2">
+              <h2 class="font-serif text-2xl sm:text-3xl font-bold text-black">
+                ActivityUI
+              </h2>
+              <span class="text-xs font-mono bg-[#e8e4d9] text-zinc-800 px-2 py-0.5 border border-[#808080] font-semibold">
+                Productividad local y privacidad estricta
+              </span>
+            </div>
+          </div>
+
+          <p class="font-serif text-sm sm:text-base leading-relaxed text-zinc-900">
+            Una aplicación de escritorio pensada para entender en qué se me va el tiempo delante del ordenador sin enviar absolutamente nada a servidores externos. Todo el procesamiento y almacenamiento se realiza en local, construida orquestando agentes de IA en paralelo para resolver cada módulo.
+          </p>
+
+          <!-- Key Highlights Box -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 font-mono text-xs">
+            <div class="bg-[#fffcf5] p-3 border-2 border-t-white border-l-white border-r-[#808080] border-b-[#808080]">
+              <span class="font-bold text-black block mb-1">🔒 100% Privado</span>
+              <span class="text-zinc-700 font-serif text-xs">Sin telemetría ni servidores remotos. Almacenamiento local directo.</span>
+            </div>
+            <div class="bg-[#fffcf5] p-3 border-2 border-t-white border-l-white border-r-[#808080] border-b-[#808080]">
+              <span class="font-bold text-black block mb-1">🤖 Agentic Architecture</span>
+              <span class="text-zinc-700 font-serif text-xs">Desarrollo asistido mediante agentes de IA coordinados.</span>
+            </div>
+            <div class="bg-[#fffcf5] p-3 border-2 border-t-white border-l-white border-r-[#808080] border-b-[#808080]">
+              <span class="font-bold text-black block mb-1">⚡ Alto Rendimiento</span>
+              <span class="text-zinc-700 font-serif text-xs">Monitorización pasiva en segundo plano con impacto mínimo.</span>
+            </div>
+          </div>
+
+          <!-- Retro 3D Beveled Buttons (Win95 style) -->
+          <div class="pt-2">
+            <div class="text-xs font-mono text-zinc-600 mb-2 uppercase font-semibold">
+              [ Enlaces directos de acceso ]
+            </div>
+            <div class="flex flex-wrap items-center gap-3">
+              <a
+                href="https://14tomass.github.io/activityUI/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-1.5 px-3.5 py-2 bg-[#c0c0c0] text-black border-2 border-t-white border-l-white border-r-[#404040] border-b-[#404040] hover:bg-[#d8d8d8] active:border-t-[#404040] active:border-l-[#404040] active:border-r-white active:border-b-white font-mono text-xs sm:text-sm font-semibold shadow-sm"
+              >
+                <span>🌐</span>
+                <span>[ Ver Landing Page ]</span>
+                <span class="text-zinc-500 text-xs">↗</span>
+              </a>
+
+              <a
+                href="https://github.com/14tomass/activityUI"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-1.5 px-3.5 py-2 bg-[#c0c0c0] text-black border-2 border-t-white border-l-white border-r-[#404040] border-b-[#404040] hover:bg-[#d8d8d8] active:border-t-[#404040] active:border-l-[#404040] active:border-r-white active:border-b-white font-mono text-xs sm:text-sm font-semibold shadow-sm"
+              >
+                <span>📂</span>
+                <span>[ Código en GitHub ]</span>
+                <span class="text-zinc-500 text-xs">↗</span>
+              </a>
+
+              <a
+                href="https://github.com/14tomass/activityUI/releases/latest"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-1.5 px-3.5 py-2 bg-[#c0c0c0] text-black border-2 border-t-white border-l-white border-r-[#404040] border-b-[#404040] hover:bg-[#d8d8d8] active:border-t-[#404040] active:border-l-[#404040] active:border-r-white active:border-b-white font-mono text-xs sm:text-sm font-semibold shadow-sm"
+              >
+                <span>💾</span>
+                <span>[ Descargar Release (.exe / .zip) ]</span>
+                <span class="text-zinc-500 text-xs">↗</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 3. Ventana en Obras (Placeholder ML / Proyectos futuros) -->
+      <section class="bg-[#c0c0c0] p-1.5 border-2 border-t-white border-l-white border-r-[#404040] border-b-[#404040] shadow-xl">
+        <div class="bg-gradient-to-r from-[#000080] to-[#1084d0] text-white px-3 py-1 flex items-center justify-between text-xs font-bold">
+          <div class="flex items-center gap-2">
+            <span>🚧</span>
+            <span>LABORATORIO_ML // EN_DESARROLLO.LOG</span>
+          </div>
+          <span class="text-[11px] font-mono text-yellow-300">[EN_CONSTRUCCIÓN]</span>
+        </div>
+
+        <div class="p-4 sm:p-6 bg-[#fbf8f1] border-2 border-t-[#808080] border-l-[#808080] border-r-white border-b-white mt-1 space-y-4 font-serif text-zinc-900">
+          
+          <div class="bg-[#fff3cd] border-2 border-[#856404] p-3 text-zinc-900 font-mono text-xs flex items-center gap-3">
+            <span class="text-2xl select-none">⚠️</span>
+            <div>
+              <strong class="text-[#856404] font-bold block uppercase tracking-wide">*** UNDER CONSTRUCTION / WORK IN PROGRESS ***</strong>
+              <span>Área técnica en fase de diseño de modelos experimentales.</span>
+            </div>
+          </div>
+
+          <p class="leading-relaxed text-sm sm:text-base">
+            Actualmente entrenando y diseñando modelos de series temporales y clustering sobre los datos de productividad recopilados. Nuevos experimentos y notebooks se irán publicando aquí.
+          </p>
+
+          <div class="bg-[#e8e4d9] p-3.5 border border-[#808080] font-mono text-xs text-zinc-800 space-y-1.5">
+            <div class="font-bold text-black flex items-center gap-1.5">
+              <span>📋</span>
+              <span>PRÓXIMAS RELEASES EN PIPELINE:</span>
+            </div>
+            <ul class="list-disc list-inside space-y-1 text-zinc-700 pl-2 font-serif text-xs sm:text-sm">
+              <li>Modelos de clustering de sesiones de trabajo y detección de patrones de fatiga.</li>
+              <li>Análisis descriptivo de datasets de actividad con pipelines locales reproducibles.</li>
+              <li>Orquestación multi-agente para síntesis automática de tareas sin depender de la nube.</li>
+            </ul>
+          </div>
+
+          <!-- Internal navigation shortcuts -->
+          <div class="pt-2 flex flex-wrap items-center justify-between gap-4 font-mono text-xs border-t border-[#808080]/30">
+            <a href="/universidad" class="inline-flex items-center gap-1 px-3 py-1.5 bg-[#c0c0c0] text-black border-2 border-t-white border-l-white border-r-[#404040] border-b-[#404040] hover:bg-[#d8d8d8] active:border-t-[#404040] active:border-l-[#404040] active:border-r-white active:border-b-white font-semibold">
+              <span>🎓</span>
+              <span>Ver Universidad & Formación</span>
+              <span>→</span>
+            </a>
+            <a href="/sobre-mi" class="inline-flex items-center gap-1 px-3 py-1.5 bg-[#c0c0c0] text-black border-2 border-t-white border-l-white border-r-[#404040] border-b-[#404040] hover:bg-[#d8d8d8] active:border-t-[#404040] active:border-l-[#404040] active:border-r-white active:border-b-white font-semibold">
+              <span>👤</span>
+              <span>Conocer Más Sobre Mí</span>
+              <span>→</span>
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Status Bar at bottom -->
+      <footer class="bg-[#c0c0c0] p-1 border-2 border-t-white border-l-white border-r-[#404040] border-b-[#404040] flex flex-wrap items-center justify-between text-xs text-zinc-700 font-mono gap-2">
+        <div class="flex items-center gap-2 px-2 py-0.5 bg-[#dfdfdf] border border-t-[#808080] border-l-[#808080] border-r-white border-b-white">
+          <span class="text-green-700">●</span>
+          <span>SISTEMA: OK // WINDOWS 95 READY</span>
+        </div>
+        <div class="flex items-center gap-3 px-2 py-0.5 bg-[#dfdfdf] border border-t-[#808080] border-l-[#808080] border-r-white border-b-white">
+          <span>PORTFOLIO v3.0</span>
+          <span>LOCAL-FIRST</span>
+          <span>COD: UTF-8</span>
+        </div>
+      </footer>
+
+    </main>
+  </div>
 </Layout>
-
-<style>
-  /* Retro 3D Beveled Buttons (Win95 / Netscape 90s aesthetic) */
-  .retro-btn {
-    border-top: 2px solid #ffffff;
-    border-left: 2px solid #ffffff;
-    border-right: 2px solid #27272a;
-    border-bottom: 2px solid #27272a;
-    box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.9);
-    cursor: pointer;
-    user-select: none;
-    transition: transform 0.05s ease, box-shadow 0.05s ease;
-    text-decoration: none;
-  }
-
-  .retro-btn:hover {
-    background-color: #f4f4f5;
-  }
-
-  .retro-btn:active {
-    border-top: 2px solid #27272a;
-    border-left: 2px solid #27272a;
-    border-right: 2px solid #ffffff;
-    border-bottom: 2px solid #ffffff;
-    box-shadow: none;
-    transform: translate(2px, 2px);
-  }
-
-  /* Retro Hazard warning stripes banner */
-  .hazard-stripe {
-    background: repeating-linear-gradient(
-      -45deg,
-      #f59e0b,
-      #f59e0b 16px,
-      #18181b 16px,
-      #18181b 32px
-    );
-    color: #ffffff;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.9), 0 0 4px #000000;
-  }
-
-  /* Retro window styling */
-  .retro-window {
-    border-top-color: #52525b;
-    border-left-color: #52525b;
-    border-right-color: #18181b;
-    border-bottom-color: #18181b;
-  }
-</style>
