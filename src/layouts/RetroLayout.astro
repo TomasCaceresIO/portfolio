@@ -1,0 +1,263 @@
+---
+import '../styles/retro.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  locationUrl?: string;
+}
+
+const {
+  title = 'Tomas Cáceres - Netscape Navigator',
+  description = 'Portfolio de Tomás Cáceres: Machine Learning & Data Science Engineer. Experiencia retro Web 1.0 / Windows 95.',
+  locationUrl = 'http://tomascaceres.dev/',
+} = Astro.props;
+
+const currentPath = Astro.url.pathname;
+const cleanPath = currentPath.endsWith('/') && currentPath !== '/' ? currentPath.slice(0, -1) : currentPath;
+
+const isHome = cleanPath === '' || cleanPath === '/';
+const isUni = cleanPath === '/universidad';
+const isAbout = cleanPath === '/sobre-mi';
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="author" content="Tomás Cáceres" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>{title}</title>
+  </head>
+  <body class="retro-desktop">
+    <div class="min-h-screen py-2 sm:py-6 px-1 sm:px-4 flex flex-col items-center justify-start">
+      
+      <!-- Netscape Navigator / Win95 Main Window Frame -->
+      <div class="w-full max-w-6xl retro-window flex flex-col my-auto shadow-2xl">
+        
+        <!-- 1. Window Titlebar (Classic Blue Gradient) -->
+        <header class="retro-titlebar">
+          <div class="flex items-center gap-1.5 overflow-hidden">
+            <!-- Small Netscape N Icon -->
+            <span class="inline-flex items-center justify-center w-4 h-4 bg-black text-[#00ff66] font-mono text-[10px] font-black border border-white/50 select-none">
+              N
+            </span>
+            <span class="truncate tracking-wide text-xs sm:text-sm drop-shadow-sm">
+              {title.includes('Netscape') ? title : `${title} - Netscape Navigator`}
+            </span>
+          </div>
+
+          <!-- Window System Controls -->
+          <div class="retro-title-ctrls flex-shrink-0" aria-hidden="true">
+            <button class="retro-title-btn" title="Minimize" aria-label="Minimize">_</button>
+            <button class="retro-title-btn font-mono" title="Maximize" aria-label="Maximize">□</button>
+            <button class="retro-title-btn font-bold text-red-900" title="Close" aria-label="Close">✕</button>
+          </div>
+        </header>
+
+        <!-- 2. Menu Bar (File, Edit, View, Go, Bookmarks, Options, Directory, Help) -->
+        <nav class="retro-menubar" aria-label="System Menu">
+          <span class="retro-menu-item"><u>F</u>ile</span>
+          <span class="retro-menu-item"><u>E</u>dit</span>
+          <span class="retro-menu-item"><u>V</u>iew</span>
+          <span class="retro-menu-item"><u>G</u>o</span>
+          <span class="retro-menu-item"><u>B</u>ookmarks</span>
+          <span class="retro-menu-item"><u>O</u>ptions</span>
+          <span class="retro-menu-item"><u>D</u>irectory</span>
+          <span class="retro-menu-item"><u>W</u>indow</span>
+          <span class="retro-menu-item"><u>H</u>elp</span>
+        </nav>
+
+        <!-- 3. Classic Netscape Toolbar & Animated Radar Icon -->
+        <div class="bg-[#c0c0c0] p-1.5 border-b border-[#808080] flex items-center justify-between gap-2 overflow-x-auto">
+          <!-- Toolbar Action Buttons -->
+          <div class="flex items-center gap-1 flex-wrap">
+            <button type="button" class="retro-tool-btn" onclick="history.back()" title="Back">
+              <span class="text-xs">⏮</span>
+              <span class="text-[9px] font-sans font-bold">Back</span>
+            </button>
+            <button type="button" class="retro-tool-btn" onclick="history.forward()" title="Forward">
+              <span class="text-xs">⏭</span>
+              <span class="text-[9px] font-sans font-bold">Forward</span>
+            </button>
+            <a href="/" class="retro-tool-btn" title="Home">
+              <span class="text-xs">🏠</span>
+              <span class="text-[9px] font-sans font-bold">Home</span>
+            </a>
+            <button type="button" class="retro-tool-btn" onclick="location.reload()" title="Reload">
+              <span class="text-xs">🔄</span>
+              <span class="text-[9px] font-sans font-bold">Reload</span>
+            </button>
+            <a href="https://github.com/TomasCaceresIO" target="_blank" rel="noopener noreferrer" class="retro-tool-btn" title="Images">
+              <span class="text-xs">🖼</span>
+              <span class="text-[9px] font-sans font-bold">Images</span>
+            </a>
+            <a href="mailto:tomas14caceres@gmail.com" class="retro-tool-btn" title="Open Mail">
+              <span class="text-xs">📂</span>
+              <span class="text-[9px] font-sans font-bold">Open</span>
+            </a>
+            <button type="button" class="retro-tool-btn" onclick="window.print()" title="Print">
+              <span class="text-xs">🖨</span>
+              <span class="text-[9px] font-sans font-bold">Print</span>
+            </button>
+            <button type="button" class="retro-tool-btn" title="Find">
+              <span class="text-xs">🔍</span>
+              <span class="text-[9px] font-sans font-bold">Find</span>
+            </button>
+            <button type="button" class="retro-tool-btn" onclick="window.stop()" title="Stop">
+              <span class="text-xs text-red-700">⏹</span>
+              <span class="text-[9px] font-sans font-bold">Stop</span>
+            </button>
+          </div>
+
+          <!-- Animated Netscape "N" Radar Logo -->
+          <div class="flex-shrink-0 pl-1">
+            <div class="retro-netscape-logo" title="Netscape Navigator Active">
+              <span>N</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Location / URL Bar & Guide Shortcuts -->
+        <div class="retro-location-container flex-col sm:flex-row items-stretch sm:items-center gap-1 sm:gap-2">
+          <div class="flex items-center gap-2 flex-grow">
+            <span class="retro-location-label text-xs sm:text-sm select-none">Location:</span>
+            <div class="retro-location-input flex items-center">
+              <span class="text-green-800 mr-1 select-none">🔒</span>
+              <span class="truncate">{locationUrl.replace(/\/$/, '')}{cleanPath === '/' ? '' : cleanPath}</span>
+            </div>
+          </div>
+
+          <!-- Netscape Quick Directory Links -->
+          <div class="hidden md:flex items-center gap-1 flex-shrink-0 text-[10px]">
+            <span class="retro-btn text-[10px] py-0.5 px-1.5">What's New?</span>
+            <span class="retro-btn text-[10px] py-0.5 px-1.5">What's Cool?</span>
+            <span class="retro-btn text-[10px] py-0.5 px-1.5">Destinations</span>
+            <span class="retro-btn text-[10px] py-0.5 px-1.5">Net Search</span>
+          </div>
+        </div>
+
+        <!-- 5. Main Primary Navigation (3D Beveled Buttons) -->
+        <div class="bg-[#c0c0c0] px-3 py-2 border-b border-[#808080] flex items-center justify-between flex-wrap gap-2">
+          <nav class="flex items-center gap-2 sm:gap-3 flex-wrap" aria-label="Main Navigation">
+            <a
+              href="/"
+              class={`retro-nav-btn ${isHome ? 'active' : ''}`}
+              aria-current={isHome ? 'page' : undefined}
+            >
+              <span class="select-none">📁</span>
+              <span>[Inicio]</span>
+            </a>
+            <a
+              href="/universidad"
+              class={`retro-nav-btn ${isUni ? 'active' : ''}`}
+              aria-current={isUni ? 'page' : undefined}
+            >
+              <span class="select-none">🎓</span>
+              <span>[Universidad]</span>
+            </a>
+            <a
+              href="/sobre-mi"
+              class={`retro-nav-btn ${isAbout ? 'active' : ''}`}
+              aria-current={isAbout ? 'page' : undefined}
+            >
+              <span class="select-none">👤</span>
+              <span>[Sobre Mí]</span>
+            </a>
+          </nav>
+
+          <!-- System indicator / Live Clock simulation -->
+          <div class="hidden sm:flex items-center gap-2 text-xs font-mono bg-[#ffffff] px-2 py-0.5 border border-[#808080] shadow-inner text-zinc-800">
+            <span class="inline-block w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+            <span>NET: 100% OK</span>
+          </div>
+        </div>
+
+        <!-- 6. Main Document Content Area (<slot />) with Soft Cream Vintage Canvas -->
+        <main class="retro-content-container relative flex-grow overflow-x-hidden">
+          <slot />
+
+          <!-- Retro Horizontal Beveled Rule -->
+          <hr class="retro-hr my-8" />
+
+          <!-- 7. Retro Master Footer -->
+          <footer class="pt-2 pb-4 text-center font-sans text-xs text-zinc-800 space-y-4">
+            
+            <!-- Retro Navigation Footer Links -->
+            <div class="flex flex-wrap justify-center items-center gap-4 text-xs">
+              <a href="/" class="retro-link font-bold">[ Inicio ]</a>
+              <span class="text-zinc-400">|</span>
+              <a href="/universidad" class="retro-link font-bold">[ Universidad ]</a>
+              <span class="text-zinc-400">|</span>
+              <a href="/sobre-mi" class="retro-link font-bold">[ Sobre Mí ]</a>
+              <span class="text-zinc-400">|</span>
+              <a href="https://github.com/TomasCaceresIO" target="_blank" rel="noopener noreferrer" class="retro-link font-bold">
+                [ GitHub: TomasCaceresIO ↗ ]
+              </a>
+              <span class="text-zinc-400">|</span>
+              <a href="mailto:tomas14caceres@gmail.com" class="retro-link font-bold">
+                [ tomas14caceres@gmail.com ✉ ]
+              </a>
+            </div>
+
+            <!-- Vintage Badges Collection -->
+            <div class="flex flex-wrap justify-center items-center gap-2 pt-2">
+              <span class="retro-badge bg-black text-[#00ff66] border border-gray-600">
+                ★ Best Viewed With Netscape Navigator 3.0 ★
+              </span>
+              <span class="retro-badge bg-[#000080] text-yellow-300 border border-gray-400">
+                ⚡ 800x600 Resolution ⚡
+              </span>
+              <span class="retro-badge bg-zinc-800 text-cyan-300 border border-gray-500">
+                📄 Valid HTML 4.01
+              </span>
+              <span class="retro-badge bg-zinc-900 text-pink-400 border border-gray-600">
+                💾 Made with Notepad & Retro Style
+              </span>
+            </div>
+
+            <!-- Copyright & Credits -->
+            <p class="text-[11px] text-zinc-600 font-mono pt-1">
+              &copy; {new Date().getFullYear()} Tomás Cáceres. Hecho con HTML & estilo retro de los 90. Todos los derechos reservados.
+            </p>
+          </footer>
+        </main>
+
+        <!-- 8. Netscape Status Bar (Bottom) -->
+        <footer class="retro-statusbar flex-wrap justify-between" aria-label="Status Bar">
+          <div class="flex items-center gap-2 flex-grow">
+            <!-- Security Key / Lock Icon -->
+            <div class="retro-status-pane">
+              <span class="text-xs">🔑</span>
+              <span class="font-mono text-[10px]">Secure Host</span>
+            </div>
+            <!-- Document Status Indicator -->
+            <div class="retro-status-pane flex-grow">
+              <span class="text-xs text-blue-800">ℹ</span>
+              <span class="font-sans font-medium text-[11px]">Document: Done</span>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-1 flex-shrink-0">
+            <div class="retro-status-pane font-mono text-[10px] hidden sm:flex">
+              <span>Baud: 33.6 Kbps</span>
+            </div>
+            <div class="retro-status-pane font-mono text-[10px]">
+              <span class="text-emerald-700">● 100%</span>
+            </div>
+          </div>
+        </footer>
+
+      </div>
+
+    </div>
+  </body>
+</html>

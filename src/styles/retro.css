@@ -1,0 +1,513 @@
+/* ==========================================================================
+   RETRO WEB 1.0 / WINDOWS 95 / NETSCAPE NAVIGATOR STYLESHEET
+   Tomas Caceres Portfolio - System Retro Styles
+   ========================================================================== */
+
+:root {
+  /* Classic Win95 / Netscape System Palette */
+  --win-bg: #c0c0c0;
+  --win-bg-light: #d4d0c8;
+  --win-bg-dark: #808080;
+  --win-border-light: #ffffff;
+  --win-border-highlight: #dfdfdf;
+  --win-border-shadow: #808080;
+  --win-border-dark: #000000;
+
+  /* Classic Titlebar Gradient */
+  --win-title-start: #000080;
+  --win-title-end: #1084d0;
+  --win-title-text: #ffffff;
+
+  /* Content Cream Palette */
+  --retro-content-bg: #fffcf5;
+  --retro-content-bg-alt: #fbf8f1;
+  --retro-content-text: #1a1a1a;
+
+  /* Classic Web 1.0 Link Colors */
+  --retro-link: #0000ee;
+  --retro-link-visited: #551a8b;
+  --retro-link-hover: #ff0000;
+  --retro-link-active: #ff0000;
+
+  /* Desktop Background (Classic Windows Teal) */
+  --retro-desktop-bg: #008080;
+
+  /* Typography */
+  --font-serif-classic: 'Times New Roman', Times, Georgia, serif;
+  --font-mono-classic: 'Courier New', Courier, 'Lucida Console', monospace;
+  --font-system: 'MS Sans Serif', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ==========================================================================
+   Base & Reset for Retro Environment
+   ========================================================================== */
+
+body.retro-desktop {
+  background-color: var(--retro-desktop-bg);
+  background-image: 
+    radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    radial-gradient(rgba(0, 0, 0, 0.15) 1px, transparent 1px);
+  background-size: 4px 4px, 8px 8px;
+  background-position: 0 0, 4px 4px;
+  color: var(--retro-content-text);
+  font-family: var(--font-system);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Custom Win95-style Scrollbars */
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--win-bg);
+  border-left: 1px solid var(--win-border-shadow);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--win-bg);
+  border-top: 2px solid var(--win-border-light);
+  border-left: 2px solid var(--win-border-light);
+  border-right: 2px solid var(--win-border-dark);
+  border-bottom: 2px solid var(--win-border-dark);
+  box-shadow: inset 1px 1px 0px var(--win-border-highlight), inset -1px -1px 0px var(--win-border-shadow);
+}
+
+::-webkit-scrollbar-thumb:active {
+  border-top: 2px solid var(--win-border-dark);
+  border-left: 2px solid var(--win-border-dark);
+  border-right: 2px solid var(--win-border-light);
+  border-bottom: 2px solid var(--win-border-light);
+}
+
+::-webkit-scrollbar-button {
+  background-color: var(--win-bg);
+  border-top: 1px solid var(--win-border-light);
+  border-left: 1px solid var(--win-border-light);
+  border-right: 1px solid var(--win-border-dark);
+  border-bottom: 1px solid var(--win-border-dark);
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+/* ==========================================================================
+   3D Bevel Utilities (Win95 / Netscape)
+   ========================================================================== */
+
+/* Outset: Raised 3D Box */
+.retro-outset {
+  background-color: var(--win-bg);
+  border-top: 2px solid var(--win-border-light);
+  border-left: 2px solid var(--win-border-light);
+  border-right: 2px solid var(--win-border-dark);
+  border-bottom: 2px solid var(--win-border-dark);
+  box-shadow: inset 1px 1px 0px var(--win-border-highlight), inset -1px -1px 0px var(--win-border-shadow);
+}
+
+/* Thin Outset */
+.retro-outset-thin {
+  border-top: 1px solid var(--win-border-light);
+  border-left: 1px solid var(--win-border-light);
+  border-right: 1px solid var(--win-border-shadow);
+  border-bottom: 1px solid var(--win-border-shadow);
+}
+
+/* Inset: Sunken 3D Box */
+.retro-inset {
+  border-top: 2px solid var(--win-border-dark);
+  border-left: 2px solid var(--win-border-dark);
+  border-right: 2px solid var(--win-border-light);
+  border-bottom: 2px solid var(--win-border-light);
+  box-shadow: inset 1px 1px 0px var(--win-border-shadow), inset -1px -1px 0px var(--win-border-highlight);
+}
+
+/* Soft Inset (used for address bars, status panes) */
+.retro-inset-soft {
+  border-top: 1px solid var(--win-border-shadow);
+  border-left: 1px solid var(--win-border-shadow);
+  border-right: 1px solid var(--win-border-light);
+  border-bottom: 1px solid var(--win-border-light);
+  box-shadow: inset 1px 1px 0px #000000;
+}
+
+/* Ridge / Grooved borders */
+.retro-groove {
+  border: 2px groove #ffffff;
+}
+
+/* Horizontal Retro Beveled Rule */
+.retro-hr {
+  border: 0;
+  border-top: 1px solid var(--win-border-shadow);
+  border-bottom: 1px solid var(--win-border-light);
+  height: 2px;
+  margin: 12px 0;
+  clear: both;
+}
+
+/* ==========================================================================
+   Retro Interactive Elements (Buttons, Inputs, Links)
+   ========================================================================== */
+
+/* Classic Win95 Push Button */
+.retro-btn {
+  font-family: var(--font-system);
+  font-size: 12px;
+  font-weight: normal;
+  color: #000000;
+  background-color: var(--win-bg);
+  padding: 3px 12px;
+  border-top: 2px solid var(--win-border-light);
+  border-left: 2px solid var(--win-border-light);
+  border-right: 2px solid var(--win-border-dark);
+  border-bottom: 2px solid var(--win-border-dark);
+  box-shadow: inset 1px 1px 0px var(--win-border-highlight), inset -1px -1px 0px var(--win-border-shadow);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  user-select: none;
+  line-height: 1.3;
+}
+
+.retro-btn:hover {
+  background-color: #d0d0d0;
+  color: #000000;
+}
+
+.retro-btn:active,
+.retro-btn.active {
+  border-top: 2px solid var(--win-border-dark);
+  border-left: 2px solid var(--win-border-dark);
+  border-right: 2px solid var(--win-border-light);
+  border-bottom: 2px solid var(--win-border-light);
+  box-shadow: inset 1px 1px 0px var(--win-border-shadow), inset -1px -1px 0px var(--win-border-highlight);
+  padding: 4px 11px 2px 13px;
+  background-color: #b4b4b4;
+}
+
+/* Big Retro Nav Button */
+.retro-nav-btn {
+  font-family: var(--font-system);
+  font-size: 12px;
+  font-weight: 600;
+  color: #000000;
+  background-color: var(--win-bg);
+  padding: 4px 14px;
+  border-top: 2px solid var(--win-border-light);
+  border-left: 2px solid var(--win-border-light);
+  border-right: 2px solid var(--win-border-dark);
+  border-bottom: 2px solid var(--win-border-dark);
+  box-shadow: inset 1px 1px 0px var(--win-border-highlight), inset -1px -1px 0px var(--win-border-shadow);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: none;
+}
+
+.retro-nav-btn:hover {
+  background-color: #d8d8d8;
+  color: #000000;
+}
+
+.retro-nav-btn:active,
+.retro-nav-btn[aria-current="page"] {
+  border-top: 2px solid var(--win-border-dark);
+  border-left: 2px solid var(--win-border-dark);
+  border-right: 2px solid var(--win-border-light);
+  border-bottom: 2px solid var(--win-border-light);
+  box-shadow: inset 1px 1px 0px var(--win-border-shadow);
+  background-color: #b0b0b0;
+  font-weight: bold;
+}
+
+/* Netscape Toolbar Buttons */
+.retro-tool-btn {
+  font-family: var(--font-system);
+  font-size: 10px;
+  color: #000000;
+  background: var(--win-bg);
+  border-top: 1px solid var(--win-border-light);
+  border-left: 1px solid var(--win-border-light);
+  border-right: 1px solid var(--win-border-shadow);
+  border-bottom: 1px solid var(--win-border-shadow);
+  padding: 2px 6px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+.retro-tool-btn:hover {
+  background: #e0e0e0;
+}
+
+.retro-tool-btn:active {
+  border-top: 1px solid var(--win-border-shadow);
+  border-left: 1px solid var(--win-border-shadow);
+  border-right: 1px solid var(--win-border-light);
+  border-bottom: 1px solid var(--win-border-light);
+  background: #b8b8b8;
+}
+
+/* Classic Links */
+.retro-link {
+  color: var(--retro-link);
+  text-decoration: underline;
+}
+
+.retro-link:visited {
+  color: var(--retro-link-visited);
+}
+
+.retro-link:hover,
+.retro-link:active {
+  color: var(--retro-link-hover);
+}
+
+/* ==========================================================================
+   Window Components (Netscape / Win95)
+   ========================================================================== */
+
+/* Main Window Wrapper */
+.retro-window {
+  background-color: var(--win-bg);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5), 0 0 0 1px #000000;
+  border-top: 2px solid var(--win-border-light);
+  border-left: 2px solid var(--win-border-light);
+  border-right: 2px solid var(--win-border-dark);
+  border-bottom: 2px solid var(--win-border-dark);
+}
+
+/* Window Titlebar with Classic Blue Gradient */
+.retro-titlebar {
+  background: linear-gradient(90deg, var(--win-title-start) 0%, var(--win-title-end) 100%);
+  color: var(--win-title-text);
+  padding: 2px 4px 2px 6px;
+  font-family: var(--font-system);
+  font-weight: bold;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  letter-spacing: 0.2px;
+  user-select: none;
+  min-height: 22px;
+}
+
+/* Window Titlebar Controls */
+.retro-title-ctrls {
+  display: flex;
+  gap: 2px;
+}
+
+.retro-title-btn {
+  width: 16px;
+  height: 14px;
+  background-color: var(--win-bg);
+  color: #000000;
+  font-family: var(--font-system);
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid var(--win-border-light);
+  border-left: 1px solid var(--win-border-light);
+  border-right: 1px solid var(--win-border-dark);
+  border-bottom: 1px solid var(--win-border-dark);
+  box-shadow: inset 1px 1px 0px var(--win-border-highlight), inset -1px -1px 0px var(--win-border-shadow);
+  cursor: default;
+  padding: 0;
+}
+
+.retro-title-btn:active {
+  border-top: 1px solid var(--win-border-dark);
+  border-left: 1px solid var(--win-border-dark);
+  border-right: 1px solid var(--win-border-light);
+  border-bottom: 1px solid var(--win-border-light);
+  padding: 1px 0 0 1px;
+}
+
+/* Menu Bar */
+.retro-menubar {
+  background-color: var(--win-bg);
+  border-bottom: 1px solid var(--win-border-shadow);
+  padding: 1px 4px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px;
+  font-size: 12px;
+  font-family: var(--font-system);
+}
+
+.retro-menu-item {
+  padding: 2px 6px;
+  cursor: default;
+  user-select: none;
+  color: #000000;
+}
+
+.retro-menu-item:hover {
+  background-color: #000080;
+  color: #ffffff;
+}
+
+.retro-menu-item u {
+  text-decoration: underline;
+}
+
+/* Location Bar */
+.retro-location-container {
+  background-color: var(--win-bg);
+  padding: 4px 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid var(--win-border-shadow);
+  font-size: 12px;
+  font-family: var(--font-system);
+}
+
+.retro-location-label {
+  font-weight: bold;
+  color: #000000;
+  white-space: nowrap;
+}
+
+.retro-location-input {
+  flex-grow: 1;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: var(--font-mono-classic);
+  font-size: 12px;
+  padding: 2px 6px;
+  border-top: 1px solid var(--win-border-shadow);
+  border-left: 1px solid var(--win-border-shadow);
+  border-right: 1px solid var(--win-border-light);
+  border-bottom: 1px solid var(--win-border-light);
+  box-shadow: inset 1px 1px 0px #000000;
+  outline: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Netscape Animated Logo Indicator */
+.retro-netscape-logo {
+  width: 32px;
+  height: 32px;
+  background-color: #000000;
+  border-top: 2px solid var(--win-border-shadow);
+  border-left: 2px solid var(--win-border-shadow);
+  border-right: 2px solid var(--win-border-light);
+  border-bottom: 2px solid var(--win-border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-system);
+  font-weight: 900;
+  font-size: 20px;
+  color: #00ff66;
+  text-shadow: 0 0 5px #00ff66;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.retro-netscape-logo::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  animation: netscapePulse 3s infinite;
+}
+
+@keyframes netscapePulse {
+  0% { left: -100%; }
+  20% { left: 100%; }
+  100% { left: 100%; }
+}
+
+/* Content Area inside Netscape Window */
+.retro-content-container {
+  background-color: var(--retro-content-bg);
+  color: var(--retro-content-text);
+  font-family: var(--font-serif-classic);
+  border-top: 2px solid var(--win-border-dark);
+  border-left: 2px solid var(--win-border-dark);
+  border-right: 2px solid var(--win-border-light);
+  border-bottom: 2px solid var(--win-border-light);
+  box-shadow: inset 1px 1px 0px var(--win-border-shadow);
+  padding: 16px 20px;
+  min-height: 480px;
+}
+
+/* Status Bar */
+.retro-statusbar {
+  background-color: var(--win-bg);
+  padding: 2px 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-family: var(--font-system);
+  color: #000000;
+  border-top: 1px solid var(--win-border-shadow);
+}
+
+.retro-status-pane {
+  border-top: 1px solid var(--win-border-shadow);
+  border-left: 1px solid var(--win-border-shadow);
+  border-right: 1px solid var(--win-border-light);
+  border-bottom: 1px solid var(--win-border-light);
+  padding: 1px 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Badges Retro */
+.retro-badge {
+  font-family: var(--font-mono-classic);
+  font-size: 10px;
+  padding: 2px 6px;
+  background: #000000;
+  color: #00ff00;
+  border: 1px solid #808080;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  letter-spacing: 0.5px;
+}
+
+/* Classic marquee / banner helper */
+.retro-marquee-box {
+  background: #000080;
+  color: #ffff00;
+  font-family: var(--font-mono-classic);
+  font-size: 12px;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-top: 1px solid var(--win-border-dark);
+  border-left: 1px solid var(--win-border-dark);
+  border-right: 1px solid var(--win-border-light);
+  border-bottom: 1px solid var(--win-border-light);
+}
