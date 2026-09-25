@@ -4,7 +4,7 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout
   title="Tomás Cáceres | Inicio & Proyectos"
-  description="Portfolio de Tomás Cáceres: Estudiante de Ingeniería Informática en la USAL."
+  description="Portfolio de Tomás Cáceres: Estudiante de Ingeniería Informática en la USAL, proyectos de software y ActivityUI."
 >
   <!-- Background retro grid / workspace -->
   <div class="min-h-screen bg-[#008080] text-zinc-900 font-mono py-6 px-3 sm:px-6 selection:bg-[#000080] selection:text-white">
@@ -47,16 +47,22 @@ import Layout from '../layouts/Layout.astro';
 
         <div class="p-4 sm:p-6 bg-[#fbf8f1] border-2 border-t-[#808080] border-l-[#808080] border-r-white border-b-white mt-1 space-y-5 text-sm sm:text-base leading-relaxed text-zinc-900 font-serif">
           
-          <div class="border-b-2 border-[#808080] pb-3">
-            <h1 class="text-2xl sm:text-4xl font-bold font-serif text-black tracking-tight">
-              Perfil Tomas
-            </h1>
+          <div class="flex flex-col sm:flex-row sm:items-baseline justify-between border-b-2 border-[#808080] pb-3 gap-2 font-mono">
+            <div>
+              <h1 class="text-2xl sm:text-4xl font-bold font-serif text-black tracking-tight">
+                Hola, soy Tomás
+              </h1>
+            </div>
+            <div class="inline-flex items-center gap-2 text-xs bg-[#e8e4d9] px-3 py-1 border border-[#808080] self-start sm:self-auto">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-600 animate-pulse"></span>
+              <span class="font-semibold text-zinc-800">● Modo: Creador & Estudiante</span>
+            </div>
           </div>
 
-          <!-- Exact Personal Presentation Text -->
+          <!-- Editorial Presentation -->
           <div class="space-y-3 font-serif text-zinc-900">
-            <p class="leading-relaxed">
-              Hola, soy Tomás. Soy estudiante de Ingeniería Informática en la USAL y este es mi portfolio. Aunque te podría decir que lo he creado yo(cosa que es mentira), sí te puedo decir que todo el texto que está en esta página está escrito por mí y no lo ha escrito ninguna inteligencia artificial. Digo el texto, no el código. Estoy interesado en aprender sobre cómo funciona la inteligencia artificial por dentro, cómo se relaciona con los datos y cómo poder programar y aplicar esa inteligencia artificial a los negocios, que es lo que creo que en la actualidad falta.
+            <p class="first-letter:text-4xl first-letter:font-bold first-letter:float-left first-letter:mr-2 first-letter:text-[#000080] leading-relaxed">
+              Soy estudiante de Ingeniería Informática en la USAL y este es mi portfolio. Aunque te podría decir que lo he creado yo(cosa que es mentira), sí te puedo decir que todo el texto que está en esta página está escrito por mí y no lo ha escrito ninguna inteligencia artificial. Digo el texto, no el código. Estoy interesado en aprender sobre cómo funciona la inteligencia artificial por dentro, cómo se relaciona con los datos y cómo poder programar y aplicar esa inteligencia artificial a los negocios, que es lo que creo que en la actualidad falta.
             </p>
           </div>
 
@@ -77,11 +83,11 @@ import Layout from '../layouts/Layout.astro';
           
           <div class="border-b border-[#808080]/50 pb-3">
             <h2 class="font-serif text-2xl sm:text-3xl font-bold text-black">
-              Proyecto destacado:
+              ActivityUI
             </h2>
           </div>
 
-          <div class="font-serif text-sm sm:text-base leading-relaxed text-zinc-900 space-y-4">
+          <div class="space-y-4 font-serif text-sm sm:text-base leading-relaxed text-zinc-900">
             <p>
               Mi primer y único proyecto se me ocurrió cuando decidí que no quiero pasar mi vida scrolleando en TikTok y en Instagram,y quiero intentar aprovechar lo máximo posible el tiempo, que es lo único que no se puede comprar.
             </p>
@@ -94,7 +100,7 @@ import Layout from '../layouts/Layout.astro';
               Lo que yo he hecho es relacionar mi app con Activity Watch para que la UI sea mucho más clara y te permita hacer distintas cosas, como:
             </p>
 
-            <ul class="list-disc list-inside space-y-1 pl-2 text-zinc-900">
+            <ul class="list-disc list-inside space-y-1.5 pl-2 font-serif text-sm sm:text-base text-zinc-900">
               <li>crear categorías</li>
               <li>visualizar cuánto tiempo he gastado en un día</li>
               <li>a qué horas exactas</li>
@@ -104,6 +110,9 @@ import Layout from '../layouts/Layout.astro';
 
           <!-- Retro 3D Beveled Buttons (Win95 style) -->
           <div class="pt-2">
+            <div class="text-xs font-mono text-zinc-600 mb-2 uppercase font-semibold">
+              [ Enlaces directos de acceso ]
+            </div>
             <div class="flex flex-wrap items-center gap-3">
               <a
                 href="https://14tomass.github.io/activityUI/"
@@ -147,18 +156,20 @@ import Layout from '../layouts/Layout.astro';
       <section class="bg-[#c0c0c0] p-1.5 border-2 border-t-white border-l-white border-r-[#404040] border-b-[#404040] shadow-xl">
         <div class="bg-gradient-to-r from-[#000080] to-[#1084d0] text-white px-3 py-1 flex items-center justify-between text-xs font-bold">
           <div class="flex items-center gap-2">
-            <span>🧪</span>
-            <span>C:\EXPERIMENTOS\LABORATORIO.LOG</span>
+            <span>🚧</span>
+            <span>LABORATORIO_ML // EN_DESARROLLO.LOG</span>
           </div>
-          <span class="text-[11px] font-mono text-yellow-300">[EN_PROCESO]</span>
+          <span class="text-[11px] font-mono text-yellow-300">[EN_CONSTRUCCIÓN]</span>
         </div>
 
         <div class="p-4 sm:p-6 bg-[#fbf8f1] border-2 border-t-[#808080] border-l-[#808080] border-r-white border-b-white mt-1 space-y-4 font-serif text-zinc-900">
           
-          <div class="border-b border-[#808080]/50 pb-3">
-            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-black">
-              Laboratorio
-            </h3>
+          <div class="bg-[#fff3cd] border-2 border-[#856404] p-3 text-zinc-900 font-mono text-xs flex items-center gap-3">
+            <span class="text-2xl select-none">⚠️</span>
+            <div>
+              <strong class="text-[#856404] font-bold block uppercase tracking-wide">*** UNDER CONSTRUCTION / WORK IN PROGRESS ***</strong>
+              <span>Área técnica en fase de diseño de modelos experimentales.</span>
+            </div>
           </div>
 
           <p class="leading-relaxed text-sm sm:text-base">
@@ -190,7 +201,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
         <div class="flex items-center gap-3 px-2 py-0.5 bg-[#dfdfdf] border border-t-[#808080] border-l-[#808080] border-r-white border-b-white">
           <span>PORTFOLIO v3.0</span>
-          <span>TEXTOS 100% HUMANOS</span>
+          <span>LOCAL-FIRST</span>
           <span>COD: UTF-8</span>
         </div>
       </footer>
