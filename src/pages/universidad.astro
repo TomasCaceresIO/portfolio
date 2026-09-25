@@ -1,0 +1,233 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Universidad & Formación | Tomás Cáceres"
+  description="Trayectoria académica de Tomás Cáceres: 3.er año de Ingeniería Informática, asignaturas clave, equilibrio entre teoría universitaria y desarrollo autodidacta."
+>
+  <!-- Background retro grid / workspace -->
+  <div class="min-h-screen bg-[#008080] text-zinc-900 font-mono py-6 px-3 sm:px-6 selection:bg-[#000080] selection:text-white">
+    
+    <!-- Top System Nav / Bar -->
+    <header class="max-w-4xl mx-auto mb-6 bg-[#c0c0c0] p-1 border-2 border-t-white border-l-white border-r-[#404040] border-b-[#404040] shadow-md">
+      <div class="bg-gradient-to-r from-[#000080] to-[#1084d0] text-white px-3 py-1 flex items-center justify-between text-xs font-bold tracking-wide">
+        <div class="flex items-center gap-2">
+          <span>📁</span>
+          <span>C:\ACADEMIA\UNIVERSIDAD_EXPEDIENTE.EXE</span>
+        </div>
+        <div class="flex items-center gap-1">
+          <button class="w-4 h-4 bg-[#c0c0c0] text-black text-[10px] flex items-center justify-center border border-t-white border-l-white border-r-black border-b-black font-bold leading-none cursor-default">_</button>
+          <button class="w-4 h-4 bg-[#c0c0c0] text-black text-[10px] flex items-center justify-center border border-t-white border-l-white border-r-black border-b-black font-bold leading-none cursor-default">□</button>
+          <a href="/" class="w-4 h-4 bg-[#c0c0c0] text-black text-[10px] flex items-center justify-center border border-t-white border-l-white border-r-black border-b-black font-bold leading-none hover:bg-red-200">✕</a>
+        </div>
+      </div>
+      <!-- Menu bar -->
+      <div class="flex flex-wrap gap-4 px-2 py-1 text-xs border-b border-[#808080] text-zinc-800 bg-[#c0c0c0]">
+        <a href="/" class="hover:bg-[#000080] hover:text-white px-1.5 py-0.5 transition-colors"><u>I</u>nicio</a>
+        <a href="/universidad" class="bg-[#000080] text-white px-1.5 py-0.5"><u>U</u>niversidad</a>
+        <a href="/sobre-mi" class="hover:bg-[#000080] hover:text-white px-1.5 py-0.5 transition-colors"><u>S</u>obre Mí</a>
+        <span class="text-zinc-500">|</span>
+        <span class="text-zinc-600">Estado: 3.º Curso (En progreso)</span>
+      </div>
+    </header>
+
+    <!-- Main Window Container -->
+    <main class="max-w-4xl mx-auto space-y-6">
+      
+      <!-- Primary Window: Academic Context -->
+      <section class="bg-[#c0c0c0] p-1.5 border-2 border-t-white border-l-white border-r-[#404040] border-b-[#404040] shadow-xl">
+        <div class="bg-gradient-to-r from-[#000080] to-[#1084d0] text-white px-3 py-1 flex items-center justify-between text-xs font-bold">
+          <div class="flex items-center gap-2">
+            <span>🎓</span>
+            <span>FICHA ACADÉMICA // GRADO EN INGENIERÍA INFORMÁTICA</span>
+          </div>
+          <span class="text-[11px] font-normal opacity-90">[v3.0.26_ACTIVO]</span>
+        </div>
+
+        <div class="p-4 sm:p-6 bg-[#fbf8f1] border-2 border-t-[#808080] border-l-[#808080] border-r-white border-b-white mt-1 space-y-5 text-sm sm:text-base leading-relaxed text-zinc-900 font-serif">
+          
+          <div class="flex flex-col sm:flex-row sm:items-baseline justify-between border-b-2 border-[#808080] pb-3 gap-2 font-mono">
+            <div>
+              <h1 class="text-xl sm:text-2xl font-bold font-serif text-black">Grado en Ingeniería Informática</h1>
+              <p class="text-xs text-zinc-600 mt-0.5">Cursando actualmente: <strong class="text-zinc-900">3.er año</strong> (6.º semestre)</p>
+            </div>
+            <div class="inline-flex items-center gap-2 text-xs bg-[#e8e4d9] px-3 py-1 border border-[#808080]">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-600 animate-pulse"></span>
+              <span class="font-semibold text-zinc-800">Modo: Estudiante & Builder</span>
+            </div>
+          </div>
+
+          <!-- Sincere University Intro / Realist Tone -->
+          <div class="space-y-3 font-serif">
+            <p class="first-letter:text-3xl first-letter:font-bold first-letter:float-left first-letter:mr-2 first-letter:text-[#000080]">
+              Siendo totalmente sincero y transparente: la universidad no te convierte por arte de magia en un ingeniero listo para producción, pero te otorga los cimientos teóricos y la tolerancia a la frustración necesarios para entender qué ocurre realmente bajo el capó.
+            </p>
+            <p>
+              Estar en el <strong>tercer año de Ingeniería Informática</strong> me ha permitido filtrar el ruido. Mi enfoque nunca ha sido simplemente memorizar diapositivas para aprobar exámenes de memoria, sino absorber los fundamentos pesados (algoritmia, concurrencia, diseño modular, álgebra y gestión de memoria) para inmediatamente conectarlos con mis propios proyectos, arquitecturas autónomas y experimentos en código real.
+            </p>
+          </div>
+
+          <!-- Academic Metrics / Mini Summary Box -->
+          <div class="bg-[#fffcf5] p-3 border border-[#808080] font-mono text-xs text-zinc-800 grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div class="border-b sm:border-b-0 sm:border-r border-[#808080]/50 pb-2 sm:pb-0 sm:pr-2">
+              <span class="text-zinc-500 block">ENFOQUE PRINCIPAL:</span>
+              <span class="font-bold text-black">Sistemas, IA & Backend</span>
+            </div>
+            <div class="border-b sm:border-b-0 sm:border-r border-[#808080]/50 pb-2 sm:pb-0 sm:pr-2">
+              <span class="text-zinc-500 block">FILOSOFÍA:</span>
+              <span class="font-bold text-black">Teoría sólida + Código en vivo</span>
+            </div>
+            <div>
+              <span class="text-zinc-500 block">RITMO SEMANAL:</span>
+              <span class="font-bold text-black">Aulas de mañana / Labs de tarde</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Second Window: Asignaturas Destacadas -->
+      <section class="bg-[#c0c0c0] p-1.5 border-2 border-t-white border-l-white border-r-[#404040] border-b-[#404040] shadow-xl">
+        <div class="bg-gradient-to-r from-[#000080] to-[#1084d0] text-white px-3 py-1 flex items-center justify-between text-xs font-bold">
+          <div class="flex items-center gap-2">
+            <span>⚡</span>
+            <span>MODULOS_CLAVE.LOG // LO QUE DE VERDAD DISFRUTO</span>
+          </div>
+          <span class="text-[11px] font-normal">3 ASIGNATURAS DESTACADAS</span>
+        </div>
+
+        <div class="p-4 sm:p-6 bg-[#fbf8f1] border-2 border-t-[#808080] border-l-[#808080] border-r-white border-b-white mt-1 space-y-6">
+          <p class="text-xs sm:text-sm font-mono text-zinc-700 bg-[#e8e4d9] p-2 border border-[#808080]">
+            💡 <em>Nota del alumno:</em> Las asignaturas donde el temario deja de ser abstracto y te exige construir soluciones resilientes son las que verdaderamente marcan la diferencia:
+          </p>
+
+          <div class="grid grid-cols-1 gap-5">
+            
+            <!-- Subject 1: Programación Avanzada -->
+            <article class="bg-[#fffcf5] p-4 border-2 border-t-white border-l-white border-r-[#808080] border-b-[#808080] shadow-sm space-y-2">
+              <div class="flex flex-wrap items-center justify-between gap-2 border-b border-[#808080]/40 pb-2">
+                <div class="flex items-center gap-2">
+                  <span class="text-lg">🤖</span>
+                  <h2 class="font-mono text-sm sm:text-base font-bold text-black">Programación Avanzada</h2>
+                </div>
+                <span class="text-[11px] font-mono bg-blue-100 text-blue-900 px-2 py-0.5 border border-blue-300 font-semibold">Agentes & Arquitecturas Inteligentes</span>
+              </div>
+              <p class="font-serif text-sm text-zinc-800 leading-relaxed">
+                El campo de juego perfecto para explorar la orquestación de sistemas complejos. Aquí es donde los conceptos de <strong>agentes autónomos, heurísticas de decisión, pipelines de datos y experimentación aplicada</strong> cobran vida. Es el punto de partida que me impulsó a diseñar flujos autónomos que van más allá del simple script tradicional.
+              </p>
+              <div class="pt-1 font-mono text-xs text-zinc-600 flex flex-wrap gap-1">
+                <span class="bg-[#e8e4d9] px-1.5 py-0.5 border border-[#808080]">#AutonomousAgents</span>
+                <span class="bg-[#e8e4d9] px-1.5 py-0.5 border border-[#808080]">#Pipelines</span>
+                <span class="bg-[#e8e4d9] px-1.5 py-0.5 border border-[#808080]">#AlgoritmiaHeurística</span>
+              </div>
+            </article>
+
+            <!-- Subject 2: Programación 3 -->
+            <article class="bg-[#fffcf5] p-4 border-2 border-t-white border-l-white border-r-[#808080] border-b-[#808080] shadow-sm space-y-2">
+              <div class="flex flex-wrap items-center justify-between gap-2 border-b border-[#808080]/40 pb-2">
+                <div class="flex items-center gap-2">
+                  <span class="text-lg">☕</span>
+                  <h2 class="font-mono text-sm sm:text-base font-bold text-black">Programación 3 (Java Profundo)</h2>
+                </div>
+                <span class="text-[11px] font-mono bg-amber-100 text-amber-900 px-2 py-0.5 border border-amber-300 font-semibold">Estructuras de Datos & Rendimiento</span>
+              </div>
+              <p class="font-serif text-sm text-zinc-800 leading-relaxed">
+                Inmersión rigurosa en el ecosistema <strong>Java</strong>, programación orientada a objetos a bajo nivel de diseño, estructuras de datos avanzadas (árboles balanceados, grafos, tablas hash optimizadas) y control estricto de concurrencia y memoria. Dominar Java te da la disciplina mental para no dar por sentado ningún ciclo de CPU.
+              </p>
+              <div class="pt-1 font-mono text-xs text-zinc-600 flex flex-wrap gap-1">
+                <span class="bg-[#e8e4d9] px-1.5 py-0.5 border border-[#808080]">#JavaCore</span>
+                <span class="bg-[#e8e4d9] px-1.5 py-0.5 border border-[#808080]">#DataStructures</span>
+                <span class="bg-[#e8e4d9] px-1.5 py-0.5 border border-[#808080]">#Concurrency</span>
+              </div>
+            </article>
+
+            <!-- Subject 3: Ingeniería del Software 2 -->
+            <article class="bg-[#fffcf5] p-4 border-2 border-t-white border-l-white border-r-[#808080] border-b-[#808080] shadow-sm space-y-2">
+              <div class="flex flex-wrap items-center justify-between gap-2 border-b border-[#808080]/40 pb-2">
+                <div class="flex items-center gap-2">
+                  <span class="text-lg">📐</span>
+                  <h2 class="font-mono text-sm sm:text-base font-bold text-black">Ingeniería del Software 2</h2>
+                </div>
+                <span class="text-[11px] font-mono bg-emerald-100 text-emerald-900 px-2 py-0.5 border border-emerald-300 font-semibold">Patrones & Arquitectura Real</span>
+              </div>
+              <p class="font-serif text-sm text-zinc-800 leading-relaxed">
+                El puente entre "código que funciona en local" y "software que puede escalar y mantenerse en el tiempo". Estudio exhaustivo de patrones de diseño GoF, principios SOLID, diseño guiado por el dominio (DDD), desacoplamiento arquitectónico, testing automatizado y metodologías ágiles aplicadas a proyectos de equipo reales.
+              </p>
+              <div class="pt-1 font-mono text-xs text-zinc-600 flex flex-wrap gap-1">
+                <span class="bg-[#e8e4d9] px-1.5 py-0.5 border border-[#808080]">#DesignPatterns</span>
+                <span class="bg-[#e8e4d9] px-1.5 py-0.5 border border-[#808080]">#CleanArchitecture</span>
+                <span class="bg-[#e8e4d9] px-1.5 py-0.5 border border-[#808080]">#SOLID</span>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Third Window: Sincere Reflection (Universidad vs Autoaprendizaje) -->
+      <section class="bg-[#c0c0c0] p-1.5 border-2 border-t-white border-l-white border-r-[#404040] border-b-[#404040] shadow-xl">
+        <div class="bg-gradient-to-r from-[#000080] to-[#1084d0] text-white px-3 py-1 flex items-center justify-between text-xs font-bold">
+          <div class="flex items-center gap-2">
+            <span>💬</span>
+            <span>REFLEXION_SINCERA.TXT // EL PUENTE ENTRE EL AULA Y LA TERMINAL</span>
+          </div>
+          <span class="text-[11px] font-normal">AUTOAPRENDIZAJE</span>
+        </div>
+
+        <div class="p-4 sm:p-6 bg-[#fbf8f1] border-2 border-t-[#808080] border-l-[#808080] border-r-white border-b-white mt-1 space-y-4 font-serif text-zinc-900">
+          
+          <h3 class="font-mono text-sm sm:text-base font-bold text-black flex items-center gap-2">
+            <span>⚖️</span>
+            <span>Compaginar la teoría formal con el trasteo incesante</span>
+          </h3>
+
+          <p class="leading-relaxed text-sm sm:text-base">
+            Creo firmemente que el mejor perfil técnico nace de la intersección entre <strong>el rigor universitario</strong> y la <strong>curiosidad autodidacta salvaje</strong>. La universidad te entrega el mapa formal: las estructuras de datos, la complejidad asintótica <span class="font-mono text-xs bg-[#e8e4d9] px-1">O(n)</span>, los protocolos de red y los principios de sistemas operativos.
+          </p>
+
+          <p class="leading-relaxed text-sm sm:text-base">
+            Pero el verdadero músculo de ingeniería se entrena fuera del horario lectivo: rompiendo entornos locales, montando agentes autónomos que interactúan con APIs reales, peleando con Dockerfiles rebeldes a la 1:00 AM y desarrollando utilidades de software que resuelven problemas concretos.
+          </p>
+
+          <!-- Retro Callout Block -->
+          <div class="bg-[#e8e4d9] p-4 border-l-4 border-[#000080] border-y border-r border-[#808080] font-mono text-xs text-zinc-800 space-y-1">
+            <div class="font-bold text-black flex items-center gap-1.5">
+              <span>📌</span>
+              <span>MI FÓRMULA DIARIA:</span>
+            </div>
+            <p class="pl-4">1. Absorber el concepto formal en clase.</p>
+            <p class="pl-4">2. Llegar a casa, abrir el editor y desmontarlo en código.</p>
+            <p class="pl-4">3. Construir una herramienta funcional antes de dar el tema por entendido.</p>
+          </div>
+
+          <div class="pt-2 flex flex-wrap items-center justify-between gap-4 font-mono text-xs border-t border-[#808080]/30">
+            <a href="/" class="inline-flex items-center gap-1 px-3 py-1.5 bg-[#c0c0c0] text-black border-2 border-t-white border-l-white border-r-[#404040] border-b-[#404040] hover:bg-[#d8d8d8] active:border-t-[#404040] active:border-l-[#404040] active:border-r-white active:border-b-white font-semibold">
+              <span>←</span>
+              <span>Volver a Portafolio</span>
+            </a>
+            <a href="/sobre-mi" class="inline-flex items-center gap-1 px-3 py-1.5 bg-[#c0c0c0] text-black border-2 border-t-white border-l-white border-r-[#404040] border-b-[#404040] hover:bg-[#d8d8d8] active:border-t-[#404040] active:border-l-[#404040] active:border-r-white active:border-b-white font-semibold">
+              <span>Ver Sobre Mí</span>
+              <span>→</span>
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Status Bar at bottom -->
+      <footer class="bg-[#c0c0c0] p-1 border-2 border-t-white border-l-white border-r-[#404040] border-b-[#404040] flex flex-wrap items-center justify-between text-xs text-zinc-700 font-mono gap-2">
+        <div class="flex items-center gap-2 px-2 py-0.5 bg-[#dfdfdf] border border-t-[#808080] border-l-[#808080] border-r-white border-b-white">
+          <span class="text-green-700">●</span>
+          <span>ESTADO: 3.º CURSO EN CURSO</span>
+        </div>
+        <div class="flex items-center gap-3 px-2 py-0.5 bg-[#dfdfdf] border border-t-[#808080] border-l-[#808080] border-r-white border-b-white">
+          <span>MEM: 640K OK</span>
+          <span>DISCO: C:\ 1.44MB</span>
+          <span>COD: UTF-8</span>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+</Layout>
