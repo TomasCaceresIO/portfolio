@@ -1,0 +1,137 @@
+[
+  {
+    "id": "activity-ui",
+    "title": "ActivityUI",
+    "subtitle": "Local-First Productivity & Data Pipeline",
+    "featured": true,
+    "status": "active",
+    "category": "Local-First Systems",
+    "summary": "Aplicación de escritorio de alta eficiencia para la captura, procesamiento y visualización de telemetría de productividad personal sin telemetría externa ni almacenamiento en la nube.",
+    "problem": "La mayoría de herramientas de productividad requieren enviar telemetría a servidores de terceros, poniendo en riesgo la privacidad del usuario y generando fricción de latencia. Se requería una solución con estricta soberanía de datos que procesara y almacenara series temporales de uso 100% en local.",
+    "pipeline": "Consumo, transformación y agregación en tiempo real de streams de eventos desde el daemon local de ActivityWatch (localhost:5600). Normalización de ventanas activas, categorización determinista y cálculo de métricas agregadas por intervalos de tiempo.",
+    "architecture": "Desarrollado mediante un flujo de orquestación multi-agente en Antigravity. Núcleo nativo en Rust/Tauri que minimiza la huella de memoria RAM (<30MB) frente a alternativas en Electron, capa de presentación reactiva con React/Tailwind, y pipeline automatizado de CI/CD en GitHub Actions para compilar instaladores NSIS (.exe) y artefactos portables (.zip).",
+    "mlRoadmap": "Estructuración de esquemas de datos de series temporales optimizados para la integración local de modelos de Machine Learning: algoritmos de clustering de sesiones de trabajo (DBSCAN / K-Means), detección no supervisada de anomalías de enfoque y modelos autoregresivos locales para predecir ventanas de fatiga cognitiva.",
+    "technologies": [
+      "Rust",
+      "Tauri",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Time-Series Data",
+      "GitHub Actions",
+      "Antigravity Orchestration"
+    ],
+    "metrics": [
+      {
+        "label": "RAM Footprint",
+        "value": "< 35 MB",
+        "description": "Optimización extrema gracias al backend en Rust"
+      },
+      {
+        "label": "Data Privacy",
+        "value": "100% Local",
+        "description": "Cero telemetría externa o dependencias de nube"
+      },
+      {
+        "label": "Pipeline Throughput",
+        "value": "Event Stream",
+        "description": "Polling adaptativo de telemetría por sockets locales"
+      }
+    ],
+    "links": [
+      {
+        "label": "Landing Page",
+        "url": "https://14tomass.github.io/activityUI/",
+        "type": "live"
+      },
+      {
+        "label": "GitHub Repo",
+        "url": "https://github.com/14tomass/activityUI",
+        "type": "github"
+      },
+      {
+        "label": "Releases v0.1.x (.exe / .zip)",
+        "url": "https://github.com/14tomass/activityUI/releases/latest",
+        "type": "download"
+      }
+    ]
+  },
+  {
+    "id": "cognitive-load-ml",
+    "title": "Local Cognitive Load Predictor",
+    "subtitle": "Behavioral Anomaly Detection & Time-Series Clustering",
+    "featured": false,
+    "status": "roadmap",
+    "category": "Machine Learning & AI",
+    "summary": "Pipeline de inferencia local para cuantificación de contexto y carga cognitiva basado en secuencias de actividad temporal.",
+    "problem": "La dispersión de atención en entornos de ingeniería genera costos de conmutación de contexto no cuantificados.",
+    "pipeline": "Vectorización de secuencias de eventos de uso, extracción de features estadísticas temporales (entropía de switching, longitud media de ráfagas) y clustering continuo.",
+    "architecture": "Inferencia con ONNX Runtime local en Rust / Python para evitar dependencias pesadas en producción local.",
+    "mlRoadmap": "Implementación de Isolation Forest para detección de anomalías de distracción y modelos LSTM/GRU ligeros para predicción de burnout por sobrecarga de contexto.",
+    "technologies": [
+      "Python",
+      "Scikit-Learn",
+      "ONNX Runtime",
+      "Rust",
+      "Time-Series Feature Extraction"
+    ],
+    "metrics": [
+      {
+        "label": "Latency Target",
+        "value": "< 5 ms",
+        "description": "Inferencia local empotrada"
+      },
+      {
+        "label": "Privacy Model",
+        "value": "Air-Gapped",
+        "description": "Sin salida a internet"
+      }
+    ],
+    "links": [
+      {
+        "label": "Roadmap Architecture",
+        "url": "https://github.com/TomasCaceresIO",
+        "type": "github"
+      }
+    ]
+  },
+  {
+    "id": "autonomous-agent-orchestrator",
+    "title": "Autonomous Agent Data Engine",
+    "subtitle": "Multi-Agent System for Automated Research & Validation",
+    "featured": false,
+    "status": "in-progress",
+    "category": "Autonomous Agents",
+    "summary": "Arquitectura de agentes cooperativos para ingesta documental, síntesis técnica automatizada y verificación cruzada de hipótesis analíticas.",
+    "problem": "La validación y síntesis manual de papers científicos y código de producción requiere horas de trabajo iterativo susceptible a sesgos y fatiga.",
+    "pipeline": "RAG semántico local con embeddings densos, filtrado por confianza y orquestación jerárquica con agentes especializados en ejecución y revisión.",
+    "architecture": "Coordinación basada en grafos de decisión asíncronos con persistencia transaccional y memoria a largo plazo.",
+    "mlRoadmap": "Auto-evaluación iterativa guiada por métricas de coherencia y auto-calibración de prompts de razonamiento.",
+    "technologies": [
+      "Python",
+      "FastAPI",
+      "Vector DB",
+      "Agentic Workflows",
+      "GitOps"
+    ],
+    "metrics": [
+      {
+        "label": "Multi-Agent",
+        "value": "3+ Roles",
+        "description": "Ejecutor, revisor y auditor"
+      },
+      {
+        "label": "Validation",
+        "value": "Deterministic",
+        "description": "Pipeline de aserciones automatizadas"
+      }
+    ],
+    "links": [
+      {
+        "label": "GitHub Profile",
+        "url": "https://github.com/TomasCaceresIO",
+        "type": "github"
+      }
+    ]
+  }
+]
